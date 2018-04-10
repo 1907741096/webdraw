@@ -1,0 +1,72 @@
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand">Web手绘板后台管理</a>
+            <div class="btn-group pull-right">
+                <a class="btn" href="/"><i class="icon-user"></i> Admin</a>
+                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/">回到前台</a></li>
+                    <li class="divider"></li>
+                    <li><a href="{:url('login/loginout')}">退出登录</a></li>
+                </ul>
+            </div>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li><a href="{:url('index/index')}">后台主页</a></li>
+
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">文章管理<b
+                            class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{:url('news/index')}">文章列表</a></li>
+                            <li class="divider"></li>
+                            <li><a href="{:url('news/add')}">添加文章</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">文章管理<b
+                            class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{:url('news/index')}">文章列表</a></li>
+                            <li class="divider"></li>
+                            <li><a href="{:url('news/add')}">添加文章</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">文章管理<b
+                            class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{:url('news/index')}">文章列表</a></li>
+                            <li class="divider"></li>
+                            <li><a href="{:url('news/add')}">添加文章</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">用户管理<b
+                            class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{:url('user/index')}">用户列表</a></li>
+                            <li class="divider"></li>
+                            <li><a href="{:url('user/add')}">添加用户</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">管理员管理<b
+                            class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{:url('admin/index')}">管理员列表</a></li>
+                            <li class="divider"></li>
+                            <li><a href="{:url('admin/add')}">添加管理员</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,104 @@
+{include file="common/head"}
+<body>
+
+{include file="common/top"}
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        {include file="common/nav"}
+        <div class="span9">
+            <div class="row-fluid">
+                <div class="page-header">
+                    <h1>文章管理
+                        <small>编辑文章</small>
+                    </h1>
+                </div>
+
+
+                <form class="form-horizontal" id="form">
+                    <fieldset>
+                        <input type="hidden" class="input-xlarge" id="id" name="id" value={if condition="$news neq ''"
+                               }{$news.id}{/if}>
+
+
+                        <div class="control-group">
+                            <label class="control-label">选择用户</label>
+                            <div class="controls">
+                                <select class="btn" name="user_id">
+                                    <option value="" {if condition="$news eq ''" }selected="selected" {/if}>请选择用户</option>
+                                    {foreach name="users" item="user"}
+                                    <option value="{$user.id}" {if condition="$user_id eq $user.id" }selected="selected" {/if}>{$user.name}</option>
+                                    {/foreach}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="news_title">文章标题</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="news_title" name="title" value={if
+                                       condition="$news neq ''" }{$news.title}{/if}>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label">图片</label>
+                            <div class="controls">
+                                <input id="file_upload_img" type="file" multiple="true">
+                                <img style="{if condition="$news eq ''" }display: none{/if}" id="upload_org_code_img"
+                                src="{if condition="$news neq ''"}{$news.thumb}{/if}" width="120" height="100">
+                                <input id="file_upload_image" name="thumb" type="hidden" multiple="true" value={if
+                                       condition="$news neq ''" }"{$news.thumb}"{/if}>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="editor">文章内容</label>
+                            <div class="controls">
+                                <script id="editor" type="text/plain" name="content" style="width:80%;height:300px;">{if
+                                    condition="$news neq ''" }{$news.content}{/if}</script>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-actions">
+                            <input type="button" class="btn btn-success" id="submit" value="确定"/>
+                            <input type="reset" class="btn" value="重置"/>
+
+                        </div>
+                    </fieldset>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    {include file="common/footer"}
+
+</div>
+<script src="__STATIC__/uploadify/jquery.uploadify.js"></script>
+<script src="__STATIC__/js/image.js"></script>
+<script type="text/javascript" src="__STATIC__/ueditor/1.4.3/ueditor.config.js"></script>
+<script type="text/javascript" src="__STATIC__/ueditor/1.4.3/ueditor.all.min.js"> </script>
+<script type="text/javascript" src="__STATIC__/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+<!--分配编辑器-->
+<script>
+    $(function(){
+        var ue = UE.getEditor('editor');
+    });
+</script>
+<script type="text/javascript">
+    var SCOPE = {
+        'save_url': '__ADMIN__/news/save',
+        'jump_url': '__ADMIN__/news',
+        'ajax_upload_image_url': '__ADMIN__/upload/image',
+        'ajax_upload_swf': '__STATIC__/uploadify/uploadify.swf'
+    };
+</script>
+
+</body>
+</html>

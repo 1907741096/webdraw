@@ -1,0 +1,14 @@
+{include file="common/head"}
+<body>
+{include file="common/top"}
+<div class="am-g am-g-fixed blog-fixed blog-content">
+    <figure data-am-widget="figure" class="am am-figure am-figure-default "   data-am-figure="{  pureview: 'true' }">
+        <div id="container">
+            {volist name="draws" id="draw"}
+                <div><img src="{$draw.thumb}"><h3>{$draw.title}</h3></div>
+            {/volist}
+        </div>
+    </figure>
+</div>
+{include file="common/footer"}
+</body>

@@ -1,0 +1,63 @@
+{include file="common/head"}
+<body>
+{include file="common/top"}
+<!-- content srart -->
+<div class="am-g am-g-fixed blog-fixed blog-content">
+    <div class="am-u-sm-12">
+        <h1 class="blog-text-center">-- 个人中心 --</h1>
+        <div class="choose-info">
+            <a href="/index/user/index?type=news">
+                <div {if condition="$type eq 'news'" }class="active" {/if}>发帖记录</div>
+        </a>
+        <a href="/index/user/index?type=draw">
+            <div {if condition="$type eq 'draw'" }class="active" {/if}>绘画记录</div>
+    </a>
+</div>
+<div class="timeline-year">
+    {volist name="datas" id="data" key='k' }
+    {if condition="$k eq 1"}
+    <h1>{$data.update_time|substr=###,0,4}</h1>
+    <hr>
+    <ul>
+        {else/}
+        {if condition="substr($datas[$k-1]['update_time'],0,4) neq substr($datas[$k-2]['update_time'],0,4)"}
+        <h1>{$data.update_time|substr=###,0,4}</h1>
+        <hr>
+        {/if}
+        {/if}
+        {if condition="$k eq 1"}
+        <ul>
+            <h3>{$data.update_time|substr=###,5,2}月</h3>
+            <hr>
+            {else/}
+            {if condition="substr($datas[$k-1]['update_time'],5,2) neq substr($datas[$k-2]['update_time'],5,2) "}
+            <ul>
+                <h3>{$data.update_time|substr=###,5,2}月</h3>
+                <hr>
+            {/if}
+            {/if}
+            <li>
+                <span class="am-u-sm-4 am-u-md-2 timeline-span">{$data.update_time|substr=###,5}</span>
+                <span class="am-u-sm-8 am-u-md-6"><a href="/index/news/index?id={$data.id}">{$data.title}</a></span>
+                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">{$data.user.name}</span>
+                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">删除</span>
+            </li>
+                {if condition="$k eq $count"}
+                </ul>
+                    {else/}
+                    {if condition="substr($datas[$k-1]['update_time'],5,2) neq substr($datas[$k]['update_time'],5,2) "}
+                    </ul>
+                        {/if}
+                        {/if}
+        <br>
+
+        {/volist}
+</div>
+<hr>
+</div>
+
+
+</div>
+<!-- content end -->
+{include file="common/footer"}
+</body>

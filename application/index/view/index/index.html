@@ -1,0 +1,26 @@
+{include file="common/head"}
+<body style="overflow: hidden">
+{include file="common/top"}
+<div class="am-g am-g-fixed blog-fixed">
+    <!-- <input type="button" id="open" value="open"></input>
+    <input type="button" id= "save" value = "save"></input>
+    <input type="button" id= "color" value="color"></input>  -->
+
+    <input type="button" value="size">
+    <input type="text" id="size" onchange="sizeChange()">
+    <input type="button" id="clear" value="clear">
+    <input type="button" value="restore" onclick="back()">
+    <input type="button" id="eraser" value="eraser" onclick="doEraser()">
+    <select id="shape" onchange="shapeChange()">
+        <option value="2">铅笔</option>
+        <option value="1">矩形</option>
+        <option value="0">圆形</option>
+    </select>
+
+
+    <input id="color" type="color"/>
+    <canvas id="myCanvas" style="border:1px solid #ddd;"></canvas>
+</div>
+<script language="JavaScript" src="__STATIC__/js/draw.js"></script>
+{include file="common/footer"}
+</body>

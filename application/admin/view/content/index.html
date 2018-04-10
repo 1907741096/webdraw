@@ -1,0 +1,75 @@
+{include file="common/head"}
+<body>
+
+{include file="common/top"}
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        {include file="common/nav"}
+        <div class="span9">
+            <div class="row-fluid">
+                <div class="page-header">
+                    <h1>教程管理
+                        <small>教程列表</small>
+                    </h1>
+                </div>
+                <div style="text-align: center">
+                    <form action="__ADMIN__/content/index" method="post">
+                        <select class="btn" name="user_id">
+                            <option value="" {if condition="$contents eq ''" }selected="selected" {/if}>请选择用户</option>
+                            {foreach name="users" item="user"}
+                            <option value="{$user.id}" {if condition="$user_id eq $user.id" }selected="selected" {/if}>{$user.name}</option>
+                            {/foreach}
+                        </select>
+                        <button type="submit" class="btn btn-success">搜索</button>
+                    </form>
+                </div>
+                <hr>
+                    <table class="table table-striped table-bordered table-condensed">
+                        <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>用户</th>
+                            <th>教程标题</th>
+                            <th>发表时间</th>
+                            <th>更新时间</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+
+                        <tbody class="tbody">
+                        {volist name="contents" id="content"}
+                        <tr class="douban-list">
+                            <td>{$content.id}</td>
+                            <td>{$content.user.name}</td>
+                            <td>{$content.title}</td>
+                            <td>{$content.create_time}</td>
+                            <td>{$content.update_time}</td>
+                            <td><span id="status" attr-id="{$content.id}" attr-status="{$content.status}" style="cursor: pointer">{$content.status|getCommonStatus}</span>
+                            </td>
+                            <td><a style="cursor: pointer" href="{:url('$content/add',['id'=>$content.id])}" style="margin: 0 auto;">修改</a></td>
+                            <td><span id="delete" attr-id="{$content.id}" attr-status="{$content.status}" style="cursor: pointer">删除</span></td>
+                        </tr>
+                        {/volist}
+                        </tbody>
+                    </table>
+                <div class="green-black">{$contents->render()}</div>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    {include file="common/footer"}
+
+</div>
+<script>
+    var SCOPE = {
+        'status_url': '__ADMIN__/content/status',
+        'delete_url': '__ADMIN__/content/status',
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<div class="span3">
+    <div class="well sidebar-nav">
+        <ul class="nav nav-list">
+            <li class="nav-header"><i class="icon-home"></i>后台主页</li>
+            <li {if condition="$nav eq 'index'"}class="active"{/if}><a href="{:url('index/index')}">主页信息</a></li>
+
+            <li class="nav-header"><i class="icon-book"></i>文章管理</li>
+            <li {if condition="$nav eq 'news'"}class="active"{/if}><a href="{:url('news/index')}">文章列表</a></li>
+            <li {if condition="$nav eq 'addnews'"}class="active"{/if}><a href="{:url('news/add')}">编辑文章</a></li>
+
+            <li class="nav-header"><i class="icon-book"></i>绘图管理</li>
+            <li {if condition="$nav eq 'draw'"}class="active"{/if}><a href="{:url('draw/index')}">绘图列表</a></li>
+
+            <li class="nav-header"><i class="icon-book"></i>教程管理</li>
+            <li {if condition="$nav eq 'content'"}class="active"{/if}><a href="{:url('content/index')}">教程列表</a></li>
+
+            <li class="nav-header"><i class="icon-user"></i>用户管理</li>
+            <li {if condition="$nav eq 'user'"}class="active"{/if}><a href="{:url('user/index')}">用户列表</a></li>
+            <li {if condition="$nav eq 'adduser'"}class="active"{/if}><a href="{:url('user/add')}">添加用户</a></li>
+
+            <li class="nav-header"><i class="icon-wrench"></i>管理员管理</li>
+            <li {if condition="$nav eq 'admin'"}class="active"{/if}><a href="{:url('admin/index')}">管理员列表</a></li>
+            <li {if condition="$nav eq 'addadmin'"}class="active"{/if}><a href="{:url('admin/add')}">添加管理员</a></li>
+
+        </ul>
+    </div>
+</div>

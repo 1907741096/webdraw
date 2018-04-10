@@ -1,0 +1,32 @@
+{include file="common/head"}
+<body>
+{include file="common/top"}
+<!-- content srart -->
+<div class="am-g am-g-fixed blog-fixed">
+    <div class="am-u-md-12 am-u-sm-12">
+        {volist name='news' id='new'}
+        <article class="am-g blog-entry-article">
+            <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
+                <a href="/index/news/detail?id={$new.id}"><img src="{$new.thumb}" alt="" class="am-u-sm-12"></a>
+            </div>
+            <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
+                <span><a href="" class="blog-color">article &nbsp;</a></span>
+                <span> @{$new.user.name} &nbsp;</span>
+                <span>{$new.update_time}</span>
+                <h1><a href="/index/news/detail?id={$new.id}">{$new.title}</a></h1>
+                <p>{$new.content|getcontent}
+                </p>
+                <p><a href="" class="blog-continue">continue reading</a></p>
+            </div>
+        </article>
+        {/volist}
+        <ul class="am-pagination">
+            {if condition="$page gt 1"}<li class="am-pagination-prev"><a href="/index/news?page={$page-1}">&laquo; Prev</a></li>{/if}
+            {if condition="$page lt $count"}<li class="am-pagination-next"><a href="/index/news?page={$page+1}">Next &raquo; </a></li>{/if}
+        </ul>
+    </div>
+
+</div>
+<!-- content end -->
+{include file="common/footer"}
+</body>

@@ -1,0 +1,86 @@
+{include file="common/head"}
+<body>
+
+{include file="common/top"}
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        {include file="common/nav"}
+        <div class="span9">
+            <div class="row-fluid">
+                <div class="page-header">
+                    <h1>用户管理 <small>编辑用户</small></h1>
+                </div>
+
+
+                <form class="form-horizontal" id="form">
+                    <fieldset>
+                        <div class="control-group">
+                            <label class="control-label" for="username">账号</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="username" name="username" value={if condition="$user neq ''"}{$user.username}{/if} >
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="password">密码</label>
+                            <div class="controls">
+                                <input type="password" class="input-xlarge" id="password" name="password" value= >
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="password1">确认密码</label>
+                            <div class="controls">
+                                <input type="password" class="input-xlarge" id="password1" name="password1" value= >
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="name">昵称</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="name" name="name" value={if condition="$user neq ''"}{$user.name}{/if} >
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="email">邮箱</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="email" name="email" value={if condition="$user neq ''"}{$user.email}{/if} >
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="tel">电话</label>
+                            <div class="controls">
+                                <input type="text" class="input-xlarge" id="tel" name="tel" value={if condition="$user neq ''"}{$user.tel}{/if} >
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <input type="hidden" name="id" value={if condition="$user neq ''"}{$user.id}{/if} >
+                            <input type="button" class="btn btn-success" id="submit" value="确定"/>
+                            <input type="reset" class="btn" value="重置" />
+                        </div>
+                    </fieldset>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    {include file="common/footer"}
+
+</div>
+<script>
+    var SCOPE={
+        'save_url':'__ADMIN__/user/save',
+        'jump_url':'__ADMIN__/user'
+    };
+</script>
+
+</body>
+</html>

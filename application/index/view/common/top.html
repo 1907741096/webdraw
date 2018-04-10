@@ -1,0 +1,35 @@
+<body id="blog">
+
+<header class="am-g am-g-fixed blog-fixed blog-text-center blog-header">
+    <div class="am-u-sm-8 am-u-sm-centered">
+                <!--<img width="200" src="http://s.amazeui.org/media/i/brand/amazeui-b.png" alt="Amaze UI Logo"/>-->
+        <h2 class="am-hide-sm-only">基于H5的Web手绘板</h2>
+    </div>
+</header>
+<hr>
+<!-- nav start -->
+<nav class="am-g am-g-fixed blog-fixed blog-nav">
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only blog-button" data-am-collapse="{target: '#blog-collapse'}" ><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="blog-collapse">
+        <ul class="am-nav am-nav-pills am-topbar-nav">
+            <li {if condition="$menu eq 'index'"}class="am-active"{/if}><a href="/">首页</a></li>
+            <!--<li class="am-dropdown" data-am-dropdown>-->
+                <!--<a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">-->
+                    <!--首页布局 <span class="am-icon-caret-down"></span>-->
+                <!--</a>-->
+                    <!--<li><a href="/mIndexndex">菜单 3</a></li>-->
+                <!--</ul>-->
+            <!--</li>-->
+            <li {if condition="$menu eq 'news'"}class="am-active"{/if}><a href="/index/news">论坛专区</a></li>
+            <li {if condition="$menu eq 'draw'"}class="am-active"{/if}><a href="/index/draw">绘画展示</a></li>
+            <li {if condition="$menu eq 'user'"}class="am-active"{/if}><a href="/index/user">个人中心</a></li>
+        </ul>
+        <form class="am-topbar-form am-topbar-right am-form-inline" role="search" action="/index/{$menu}">
+            <div class="am-form-group">
+                <input type="text" class="am-form-field am-input-sm" placeholder="搜索" name="title" value="{$title}">
+            </div>
+        </form>
+    </div>
+</nav>
+<hr>

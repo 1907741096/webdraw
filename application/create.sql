@@ -1,0 +1,112 @@
+DROP DATABASE IF EXISTS `erciyuan`;
+CREATE DATABASE IF NOT EXISTS `erciyuan`;
+USE `erciyuan`;
+SET NAMES utf8;
+
+DROP TABLE IF EXISTS `ecy_admin`;
+CREATE TABLE IF NOT EXISTS `ecy_admin`(
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `username` VARCHAR(30) UNIQUE NOT NULL,
+    `password` CHAR(32) NOT NULL,
+    `name` VARCHAR(30) ,
+    `tel` CHAR(11) ,
+    `email` VARCHAR(30) ,
+    `power` TINYINT(1) NOT NULL DEFAULT 0,
+    `status` TINYINT(1) NOT NULL DEFAULT 1,
+    `create_time` INT NOT NULL,
+    `lastlogin_time` INT NOT NULL
+)DEFAULT CHARSET = utf8;
+
+DROP TABLE IF EXISTS `ecy_user`;
+CREATE TABLE IF NOT EXISTS `ecy_user`(
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `style_id` INT NOT NULL DEFAULT 1,
+    `lang_id` INT NOT NULL DEFAULT 1,
+    `username` VARCHAR(30) UNIQUE NOT NULL,
+    `password` CHAR(32) NOT NULL,
+    `name` VARCHAR(30) ,
+    `tel` CHAR(11) ,
+    `email` VARCHAR(30) ,
+    `status` TINYINT(1) NOT NULL DEFAULT 1,
+    `create_time` INT NOT NULL,
+    `lastlogin_time` INT NOT NULL
+)DEFAULT CHARSET = utf8;
+
+DROP TABLE IF EXISTS `ecy_style`;
+CREATE TABLE IF NOT EXISTS `ecy_style`(
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `name` VARCHAR(30) UNIQUE NOT NULL,
+    `color` VARCHAR (30) UNIQUE NOT NULL,
+    `status` TINYINT(1) NOT NULL DEFAULT 1,
+    `thumb` VARCHAR (200) NOT NULL,
+    `address` VARCHAR(200) NOT NULL
+)DEFAULT CHARSET = utf8;
+
+DROP TABLE IF EXISTS `ecy_sound`;
+CREATE TABLE IF NOT EXISTS `ecy_sound`(
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `style_id` INT NOT NULL DEFAULT 1,
+    `lang_id` INT NOT NULL DEFAULT 1,
+    `place_id` INT NOT NULL DEFAULT 1,
+    `name` VARCHAR(30) UNIQUE NOT NULL,
+    `address` VARCHAR(100) NOT NULL,
+    `status` TINYINT(1) NOT NULL DEFAULT 1
+)DEFAULT CHARSET = utf8;
+
+DROP TABLE IF EXISTS `ecy_lang`;
+CREATE TABLE IF NOT EXISTS `ecy_lang`(
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `name` VARCHAR(30) UNIQUE NOT NULL,
+    `status` TINYINT(1) NOT NULL DEFAULT 1
+)DEFAULT CHARSET = utf8;
+
+DROP TABLE IF EXISTS `ecy_place`;
+CREATE TABLE IF NOT EXISTS `ecy_place`(
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `name` VARCHAR(30) UNIQUE NOT NULL,
+    `status` TINYINT(1) NOT NULL DEFAULT 1
+)DEFAULT CHARSET = utf8;
+
+DROP TABLE IF EXISTS `ecy_menu`;
+CREATE TABLE IF NOT EXISTS `ecy_menu`(
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `name` VARCHAR(30) UNIQUE NOT NULL,
+    `status` TINYINT(1) NOT NULL DEFAULT 1
+)DEFAULT CHARSET = utf8;
+
+DROP TABLE IF EXISTS `ecy_news`;
+CREATE TABLE IF NOT EXISTS `ecy_news`(
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `menu_id` INT NOT NULL,
+    `title` VARCHAR(200) NOT NULL,
+    `thumb` VARCHAR(200) NOT NULL,
+    `content` TEXT NOT NULL,
+    `create_time` INT NOT NULL,
+    `update_time` INT NOT NULL,
+    `status` TINYINT(1) NOT NULL DEFAULT 0
+)DEFAULT CHARSET = utf8;
+
+DROP TABLE IF EXISTS `ecy_comment`;
+CREATE TABLE IF NOT EXISTS `ecy_comment`(
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `news_id` INT NOT NULL,
+    `content` TEXT NOT NULL,
+    `create_time` INT NOT NULL,
+    `status` TINYINT(1) NOT NULL DEFAULT 1
+)DEFAULT CHARSET = utf8;
+
+DROP TABLE IF EXISTS `ecy_position`;
+CREATE TABLE IF NOT EXISTS `ecy_position`(
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `name` VARCHAR(30) UNIQUE NOT NULL,
+    `status` TINYINT(1) NOT NULL DEFAULT 1
+)DEFAULT CHARSET = utf8;
+
+DROP TABLE IF EXISTS `ecy_content`;
+CREATE TABLE IF NOT EXISTS `ecy_content`(
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `position_id` INT NOT NULL,
+    `news_id` INT NOT NULL,
+    `listorder` INT NOT NULL DEFAULT 0,
+    `status` TINYINT(1) NOT NULL DEFAULT 1
+)DEFAULT CHARSET = utf8;
