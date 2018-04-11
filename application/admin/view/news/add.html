@@ -34,6 +34,18 @@
                         </div>
 
                         <div class="control-group">
+                            <label class="control-label">选择标签</label>
+                            <div class="controls">
+                                <select class="btn" name="tags">
+                                    <option value="" {if condition="$news eq ''" }selected="selected" {/if}>请选择标签</option>
+                                    {foreach name="tags" item="tag" k="key"}
+                                    <option value="{$key}" {if condition="$tag_id eq $key" }selected="selected" {/if}>{$tag}</option>
+                                    {/foreach}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
                             <label class="control-label" for="news_title">文章标题</label>
                             <div class="controls">
                                 <input type="text" class="input-xlarge" id="news_title" name="title" value={if

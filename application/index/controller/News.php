@@ -22,6 +22,7 @@ class News extends Common
         $this->assign('count',ceil($count/config('setting.page_count')));
         $this->assign('news',$news);
         $this->assign('page',$page);
+        $this->assign('tags',config('tags'));
         $this->assign('menu','news');
         return $this->fetch();
     }
@@ -35,8 +36,28 @@ class News extends Common
         $data['status']=self::$status;
         $data['id']=$id;
         $new=model('news')->find($data);
+        $comments=model('comment')->getAllComments(config('setting.page_count'),['news_id'=>$id]);
+        $this->assign('comments',$comments);
+        $this->assign('tags',config('tags'));
         $this->assign('menu','news');
         $this->assign('new',$new);
         return $this->fetch();
+    }
+    public function comment(){
+        $msg=validate('comment')->gocheck('add');
+        if(!is_array($msg)){
+            $d=request()->param();
+            $d['create_time']=time();
+            $d['update_time']=$d['create_time'];
+            $comment=model('Comment')->create($d);
+            if($comment){
+                return json(['status'=>1,'message'=>'添加成功']);
+            }else{
+                return json(['status'=>0,'message'=>'添加失败']);
+            }
+        }else{
+            return json($msg);
+        }
+        return json($msg);
     }
 }

@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS `wd_news`(
     `id` INT PRIMARY KEY AUTO_INCREMENT,
     `user_id` INT NOT NULL,
     `title` VARCHAR(50) NOT NULL,
+    `tags` TINYINT(1) NOT NULL,
     `thumb` VARCHAR(255) NOT NULL,
     `content` TEXT NOT NULL,
     `create_time` INT NOT NULL,

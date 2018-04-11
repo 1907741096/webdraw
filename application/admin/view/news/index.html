@@ -31,6 +31,7 @@
                             <th>序号</th>
                             <th>用户</th>
                             <th>文章标题</th>
+                            <th>文章标签</th>
                             <th>发表时间</th>
                             <th>更新时间</th>
                             <th>状态</th>
@@ -44,6 +45,7 @@
                             <td>{$new.id}</td>
                             <td>{$new.user.name}</td>
                             <td>{$new.title}</td>
+                            <td>{$tags[$new.tags]}</td>
                             <td>{$new.create_time}</td>
                             <td>{$new.update_time}</td>
                             <td><span id="status" attr-id="{$new.id}" attr-status="{$new.status}" style="cursor: pointer">{$new.status|getCommonStatus}</span>

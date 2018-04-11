@@ -23,6 +23,7 @@ class News extends Base
         $news=model('news')->getAllNews(config('setting.page_count'),$data);
 
         $status['status']=array('eq',1);
+        $this->assign('tags',config('tags'));
         $this->assign('user_id',$user_id);
         $this->assign('news',$news);
         $this->assign('nav','news');
@@ -32,12 +33,15 @@ class News extends Base
         $status['status']=array('eq',1);
         $users=model('user')->all();
         $this->assign('users',$users);
-        $news='';$user_id='';
+        $news='';$user_id='';$tag_id='';
         if(!is_array(validate('News')->goCheck('id'))){
             $news=model('News')->find(input('id'));
             $user_id=$news['user_id'];
+            $tag_id=$news['tags'];
         }
+        $this->assign('tags',config('tags'));
         $this->assign('user_id',$user_id);
+        $this->assign('tag_id',$tag_id);
         $this->assign('news',$news);
         $this->assign('nav','addnews');
         return $this->fetch();

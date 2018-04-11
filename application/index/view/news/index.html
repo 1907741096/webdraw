@@ -10,7 +10,7 @@
                 <a href="/index/news/detail?id={$new.id}"><img src="{$new.thumb}" alt="" class="am-u-sm-12"></a>
             </div>
             <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
-                <span><a href="" class="blog-color">article &nbsp;</a></span>
+                <span><a href="" class="blog-color">{$tags[$new.tags]} &nbsp;</a></span>
                 <span> @{$new.user.name} &nbsp;</span>
                 <span>{$new.update_time}</span>
                 <h1><a href="/index/news/detail?id={$new.id}">{$new.title}</a></h1>
