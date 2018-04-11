@@ -17,6 +17,8 @@ CREATE TABLE IF NOT EXISTS `wd_admin`(
     `lastlogin_time` INT NOT NULL
 )DEFAULT CHARSET = utf8;
 
+INSERT INTO `wd_admin` (`id`,`username`,`password`,`create_time`,`lastlogin_time`) VALUES (1,'admin',md5('wd_admin'),unix_timestamp(now()),unix_timestamp(now()));
+
 DROP TABLE IF EXISTS `wd_user`;
 CREATE TABLE IF NOT EXISTS `wd_user`(
     `id` INT PRIMARY KEY AUTO_INCREMENT,

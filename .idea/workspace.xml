@@ -1,78 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97166540-b977-4ca5-b5a1-77b0791130ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../wxbook/Application/Common/Model/ReadModel.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../wxbook/Application/Home/Controller/ReadController.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../wxbook/Application/Home/View/Read/read.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Api/.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Api/20914c0f075f91df3579ffbdf5180b02.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Api/37a6259cc0c1dae299a7866489dff0bd.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Api/6512bd43d9caa6e02c990b0a82652dca.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Api/c006c6c0997385fb81210fe80e51503c.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/091b7bb6d47d453e638e7dd92829fced.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/11d4a4b4a8a2b77aaedd86d2e1323a17.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/1caa6e5079565291c3d20377c9dbeb60.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/20914c0f075f91df3579ffbdf5180b02.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/3ae5271c6098e9c886a203dbd1ff3b90.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/474a0a8aed30565986e1bed830e680af.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/5f05422adbdd9f83763f0a1b65f93222.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/67c95228a14795f8df9164514fa67eef.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/6f075cc86a5bc7db483610f123656cfa.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/755e79583d4828ff08f8d7f4b158fec0.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/853dfcf90042321a44913f974bab879e.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/8a49def9d1b0fb181c8797b4701ee22a.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/8d72646d9bf7d7c1e4a6d6e2222fafd6.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/bc6469296a13a62c5944fb11cf44360f.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/c4495106fa4272c08428328859215e5f.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/c4d471a08405afde9533cbece5914eb6.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/fca3d098a6d50c6485912996402cff98.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/ff3d3c912bbea7d78ac431ce3d3ef6ce.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Data/_fields/wxbook.wxbook_admin.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Data/_fields/wxbook.wxbook_message.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Data/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Logs/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Temp/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/common~runtime.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/index.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ssp/application/database.php" afterPath="$PROJECT_DIR$/../ssp/application/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Api/Controller/BookController.class.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Api/Controller/BookController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Api/Controller/BorrowController.class.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Api/Controller/BorrowController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Api/Controller/CollectController.class.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Api/Controller/CollectController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Api/Controller/CommentController.class.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Api/Controller/CommentController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Api/Controller/CommonController.class.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Api/Controller/CommonController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Api/Controller/MessageController.class.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Api/Controller/MessageController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Api/Controller/OrderController.class.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Api/Controller/OrderController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Api/Controller/UserController.class.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Api/Controller/UserController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Common/Conf/wx.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Common/Conf/wx.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Common/Model/BookModel.class.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Common/Model/BookModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Common/Model/CollectModel.class.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Common/Model/CollectModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Common/Model/CommentModel.class.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Common/Model/CommentModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Common/Model/UserModel.class.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Common/Model/UserModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Home/View/Index/footer.html" afterPath="$PROJECT_DIR$/../wxbook/Application/Home/View/Index/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Home/View/Index/nav.html" afterPath="$PROJECT_DIR$/../wxbook/Application/Home/View/Index/nav.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Home/View/Index/top.html" afterPath="$PROJECT_DIR$/../wxbook/Application/Home/View/Index/top.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/0a983f899ea8f81ca0f9d876f5b2f310.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/0a983f899ea8f81ca0f9d876f5b2f310.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/0baf13bcb7607250bbcfea963ef475a6.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/0baf13bcb7607250bbcfea963ef475a6.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/0f7a9296d01be56575631d303ff2643f.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/0f7a9296d01be56575631d303ff2643f.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/2e0216e8f5e280839889d272df94347d.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/2e0216e8f5e280839889d272df94347d.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/5519c61a107db419713dd1b0ff07e0fc.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/5519c61a107db419713dd1b0ff07e0fc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/78b9a285d1674ea1ed84eb4e8a93b840.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/78b9a285d1674ea1ed84eb4e8a93b840.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/bc7e4fd1e0fe4d403c55b18812683a7a.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/bc7e4fd1e0fe4d403c55b18812683a7a.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/df330276ef7f424453befec09efde76c.php" afterPath="$PROJECT_DIR$/../wxbook/Application/Runtime/Cache/Home/df330276ef7f424453befec09efde76c.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/Public/sql/wxbook.sql" afterPath="$PROJECT_DIR$/../wxbook/Public/sql/wxbook.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/api.php" afterPath="$PROJECT_DIR$/../wxbook/api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wxbook/index.php" afterPath="$PROJECT_DIR$/../wxbook/index.php" />
-    </list>
+    <list default="true" id="97166540-b977-4ca5-b5a1-77b0791130ca" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -83,124 +21,23 @@
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/Controller/IndexController.class.php">
+      <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2075">
-              <caret line="59" column="5" lean-forward="false" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
-              <folding>
-                <element signature="e#358#1824#0#PHP" expanded="false" />
-                <element signature="e#1830#1896#0#PHP" expanded="false" />
-                <element signature="e#1902#2790#0#PHP" expanded="false" />
-                <element signature="e#2869#3853#0#PHP" expanded="false" />
-                <element signature="e#3935#4815#0#PHP" expanded="false" />
-                <element signature="e#4905#5456#0#PHP" expanded="false" />
-                <element signature="e#6224#6789#0#PHP" expanded="false" />
-                <element signature="e#9607#10458#0#PHP" expanded="false" />
-                <element signature="e#10561#11552#0#PHP" expanded="false" />
-                <element signature="e#11655#12015#0#PHP" expanded="false" />
-                <element signature="e#12175#19601#0#PHP" expanded="false" />
-                <element signature="e#19782#23674#0#PHP" expanded="false" />
-                <element signature="e#23677#24798#0#PHP" expanded="false" />
-                <element signature="e#24803#26243#0#PHP" expanded="false" />
-                <marker date="1509958845571" expanded="true" signature="16142:16366" ph="..." />
-                <marker date="1509958845571" expanded="true" signature="20189:21156" ph="SELECT Publi... weipai_publish" />
-                <marker date="1509958845571" expanded="true" signature="25118:26086" ph="SELECT Publi... weipai_publish" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="recommend.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Index/recommend.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-542">
-              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="109">
+              <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/Controller/MyController.class.php">
+      <file leaf-file-name="webdraw.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/webdraw.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="102" column="5" lean-forward="true" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
-              <folding>
-                <element signature="e#1588#3088#0#PHP" expanded="false" />
-                <element signature="e#3094#3163#0#PHP" expanded="false" />
-                <element signature="e#4203#4344#0#PHP" expanded="false" />
-                <element signature="e#5912#6045#0#PHP" expanded="false" />
-                <element signature="e#6071#6315#0#PHP" expanded="false" />
-                <element signature="e#6322#6483#0#PHP" expanded="false" />
-                <element signature="e#6490#7237#0#PHP" expanded="false" />
-                <element signature="e#7241#8209#0#PHP" expanded="false" />
-                <element signature="e#8229#8338#0#PHP" expanded="false" />
-                <element signature="e#8361#8468#0#PHP" expanded="false" />
-                <element signature="e#8488#8594#0#PHP" expanded="false" />
-                <element signature="e#8620#8884#0#PHP" expanded="false" />
-                <element signature="e#8906#9362#0#PHP" expanded="false" />
-                <element signature="e#9382#9734#0#PHP" expanded="false" />
-                <element signature="e#9756#11013#0#PHP" expanded="false" />
-                <element signature="e#11709#13474#0#PHP" expanded="false" />
-                <element signature="e#13477#14674#0#PHP" expanded="false" />
-                <element signature="e#14804#18449#0#PHP" expanded="false" />
-                <element signature="e#18455#18600#0#PHP" expanded="false" />
-                <element signature="e#18606#18755#0#PHP" expanded="false" />
-                <marker date="1510034283459" expanded="true" signature="14953:16179" ph="SELECT Publi... weipai_publish" />
-                <marker date="1510034283459" expanded="true" signature="15976:16158" ph="SELECT id FR... weipai_user" />
-                <marker date="1510034283459" expanded="true" signature="16024:16149" ph="SELECT publi... weipai_publish" />
-                <marker date="1510034283459" expanded="true" signature="16085:16139" ph="SELECT publi... weipai_favorite" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../ssp/admin_themes/apps/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-300">
-              <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ajax_mypublish.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/My/ajax_mypublish.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#div#0;n#volist#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#a#0;n#div#0;n#volist#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mypublish.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/My/mypublish.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="183" column="76" lean-forward="false" selection-start-line="183" selection-start-column="76" selection-end-line="183" selection-end-column="76" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mypublish.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../rrwp/Public/js/my/mypublish.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+            <state relative-caret-position="196">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -257,7 +94,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/Desktop/BDLSSL/js/chunk.2.js" />
         <option value="$USER_HOME$/Desktop/BDLSSL/js/external/babel-support.min.js" />
         <option value="$USER_HOME$/Desktop/BDLSSL/js/ui.js" />
         <option value="$USER_HOME$/Desktop/BDLSSL/js/ria.js" />
@@ -308,6 +144,7 @@
         <option value="$PROJECT_DIR$/../rrwp/App/Home/View/My/ajax_mypublish.html" />
         <option value="$PROJECT_DIR$/../rrwp/Public/js/my/mypublish.js" />
         <option value="$PROJECT_DIR$/../rrwp/App/Home/Controller/MyController.class.php" />
+        <option value="$PROJECT_DIR$/application/webdraw.sql" />
       </list>
     </option>
   </component>
@@ -324,8 +161,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="272" />
-    <option name="y" value="141" />
+    <option name="x" value="131" />
+    <option name="y" value="162" />
     <option name="width" value="1497" />
     <option name="height" value="868" />
   </component>
@@ -345,22 +182,24 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="erciyuan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ssp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="webdraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdraw" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="webdraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdraw" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -398,6 +237,8 @@
     </option>
   </component>
   <component name="RunManager" selected="PHP Built-in Web Server.Unnamed">
+    <configuration name="Unnamed" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" />
+    <configuration name="test" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" server_name="Apache" session_id="http://localhost/erciyuan/public/index.php/admin/news/add.html" />
     <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
       <PhpTestRunnerSettings />
       <method />
@@ -442,15 +283,6 @@
       <PhpTestRunnerSettings />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run" />
       <scripts />
@@ -471,11 +303,13 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration default="false" name="test" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" server_name="Apache" session_id="http://localhost/erciyuan/public/index.php/admin/news/add.html">
-      <method />
-    </configuration>
-    <configuration default="false" name="Unnamed" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server">
-      <method />
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
     </configuration>
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="PHP Remote Debug.test" />
@@ -558,36 +392,48 @@
       <workItem from="1509671777111" duration="27999000" />
       <workItem from="1509934323341" duration="25615000" />
       <workItem from="1510018283418" duration="12417000" />
+      <workItem from="1523413104792" duration="1291000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="621951000" />
+    <option name="totallyTimeSpent" value="623242000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="272" y="141" width="1497" height="868" extended-state="0" />
+    <frame x="131" y="162" width="1497" height="868" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20516399" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20756014" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.21112517" sideWeight="0.14325842" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289855" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32603094" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26509187" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.249658" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16666667" sideWeight="0.85674155" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3992674" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16645162" sideWeight="0.85674155" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3992674" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32603094" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -625,478 +471,80 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Admin/View/User/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1425">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/Controller/MainController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="162" column="21" lean-forward="false" selection-start-line="162" selection-start-column="21" selection-end-line="162" selection-end-column="21" />
-          <folding>
-            <element signature="e#296#1449#0#PHP" expanded="false" />
-            <element signature="e#1531#2162#0#PHP" expanded="false" />
-            <element signature="e#2166#2373#0#PHP" expanded="false" />
-            <element signature="e#2399#2590#0#PHP" expanded="false" />
-            <element signature="e#7331#7692#0#PHP" expanded="false" />
-            <element signature="e#7704#10957#0#PHP" expanded="false" />
-            <element signature="e#11041#12184#0#PHP" expanded="false" />
-            <element signature="e#12229#12936#0#PHP" expanded="false" />
-            <element signature="e#12947#14178#0#PHP" expanded="false" />
-            <element signature="e#14181#14454#0#PHP" expanded="false" />
-            <element signature="e#14457#14713#0#PHP" expanded="false" />
-            <element signature="e#15217#15729#0#PHP" expanded="false" />
-            <element signature="e#15731#15887#0#PHP" expanded="false" />
-            <element signature="e#15890#16537#0#PHP" expanded="false" />
-            <marker date="1507712472491" expanded="true" signature="1673:2084" ph="SELECT A.id,... weipai_user" />
-            <marker date="1507712472491" expanded="true" signature="1950:2045" ph="SELECT COUNT... weipai_vote" />
-            <marker date="1507712472491" expanded="true" signature="2244:2343" ph="update weipa... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/Public/home/css/g1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="66" column="8" lean-forward="false" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/Controller/ArticleController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1083">
-          <caret line="47" column="38" lean-forward="false" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
-          <folding>
-            <marker date="1509609882097" expanded="true" signature="821:913" ph="select from weipai_publish... " />
-            <marker date="1509609882097" expanded="true" signature="1447:1678" ph="select A.ima... weipai_publish" />
-            <marker date="1509609882097" expanded="true" signature="1811:2031" ph="select A.ima... weipai_publish" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/Controller/BaseController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="28" column="50" lean-forward="true" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Main/ajax_publish.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Main/ajax_shake.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Main/shake.html">
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/Controller/ArticleController.class.php" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/Controller/BaseController.class.php" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Main/ajax_publish.html" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Main/ajax_shake.html" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Main/shake.html" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Main/moments.html" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Main/indexTest.html" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Common/footer.html" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Main/index.html" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/Model/FavoriteDetailModel.class.php" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/Model/FavoriteModel.class.php" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/ThinkPHP/Library/Think/Model/ViewModel.class.php" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Common/Conf/config.php" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Index/index.html" />
+    <entry file="file://$PROJECT_DIR$/application/index/view/Common/left.html" />
+    <entry file="file://$PROJECT_DIR$/application/index/view/News/new.html" />
+    <entry file="file://$PROJECT_DIR$/application/index/view/news/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Main/moments.html">
+    <entry file="file://$PROJECT_DIR$/application/index/view/Menu/index.html" />
+    <entry file="file://$PROJECT_DIR$/../wxbook/Application/Home/View/Book/book.html" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/Model/AuctionUserDetailModel.class.php" />
+    <entry file="file://$PROJECT_DIR$/../ssp/application/database.php" />
+    <entry file="file://$PROJECT_DIR$/../ssp/application/config.php" />
+    <entry file="file://$PROJECT_DIR$/../ssp/application/admin/config.php" />
+    <entry file="file://$PROJECT_DIR$/../ssp/2017113ssp.sql" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/ThinkPHP/Library/Think/Controller.class.php" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/index.php" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/Public/home/css/g.css" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Index/ajax_shops.html" />
+    <entry file="file://$PROJECT_DIR$/../ssp/application/route.php" />
+    <entry file="file://$PROJECT_DIR$/../ssp/public/router.php" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/Public/home/js/publish.js" />
+    <entry file="file://$PROJECT_DIR$/../ssp/public/index.php" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Index/baiyuan.html" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Index/zero.html" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/Public/home/js/jquery.js" />
+    <entry file="file://$PROJECT_DIR$/../ssp/application/common/logic/User.php" />
+    <entry file="file://$PROJECT_DIR$/../ssp/ssp.sql" />
+    <entry file="file://$PROJECT_DIR$/../ssp/think" />
+    <entry file="file://$PROJECT_DIR$/../ssp/application/admin/controller/Category.php" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/Public/js/my/mypublish.js" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/Controller/IndexController.class.php" />
+    <entry file="file://$PROJECT_DIR$/../ssp/application/admin/controller/Index.php" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Index/recommend.html" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/My/mypublish.html" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/My/ajax_mypublish.html" />
+    <entry file="file://$PROJECT_DIR$/../ssp/application/admin/controller/Menu.php" />
+    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/Controller/MyController.class.php" />
+    <entry file="file://$PROJECT_DIR$/../ssp/admin_themes/apps/index.html" />
+    <entry file="file://$PROJECT_DIR$/application/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Main/indexTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Common/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="72" lean-forward="true" selection-start-line="11" selection-start-column="72" selection-end-line="11" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Main/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/Model/FavoriteDetailModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/Model/FavoriteModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/ThinkPHP/Library/Think/Model/ViewModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Common/Conf/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="45" column="36" lean-forward="true" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/Common/left.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/News/new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/News/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/Menu/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../wxbook/Application/Home/View/Book/book.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="58" column="32" lean-forward="true" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/Model/AuctionUserDetailModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssp/application/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssp/application/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1875">
+        <state relative-caret-position="-3169">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ssp/application/admin/config.php">
+    <entry file="file://$PROJECT_DIR$/application/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="109">
+          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ssp/2017113ssp.sql">
+    <entry file="file://$PROJECT_DIR$/application/webdraw.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="57" column="20" lean-forward="true" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/ThinkPHP/Library/Think/Controller.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="67" column="23" lean-forward="false" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/Public/home/css/g.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="90" column="41" lean-forward="false" selection-start-line="90" selection-start-column="41" selection-end-line="90" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Index/ajax_shops.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="59" lean-forward="false" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssp/application/route.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssp/public/router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/Public/home/js/publish.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="524" column="27" lean-forward="false" selection-start-line="524" selection-start-column="27" selection-end-line="524" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssp/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Index/baiyuan.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="243" column="81" lean-forward="false" selection-start-line="243" selection-start-column="81" selection-end-line="243" selection-end-column="81" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1510019563883" expanded="false" signature="2131:2142" ph="..." />
-            <marker date="1510019563883" expanded="false" signature="2430:2441" ph="..." />
-            <marker date="1510019563883" expanded="false" signature="2749:2760" ph="..." />
-            <marker date="1510019563883" expanded="false" signature="3068:3079" ph="..." />
-            <marker date="1510019563883" expanded="false" signature="3387:3398" ph="..." />
-            <marker date="1510019563883" expanded="false" signature="3706:3717" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Index/zero.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="203" column="39" lean-forward="false" selection-start-line="203" selection-start-column="39" selection-end-line="203" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1510018956489" expanded="false" signature="2044:2055" ph="..." />
-            <marker date="1510018956489" expanded="false" signature="2319:2330" ph="..." />
-            <marker date="1510018956489" expanded="false" signature="2614:2625" ph="..." />
-            <marker date="1510018956489" expanded="false" signature="2909:2920" ph="..." />
-            <marker date="1510018956489" expanded="false" signature="3204:3215" ph="..." />
-            <marker date="1510018956489" expanded="false" signature="3499:3510" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/Public/home/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="429" column="21" lean-forward="true" selection-start-line="429" selection-start-column="21" selection-end-line="429" selection-end-column="21" />
-          <folding>
-            <marker date="1510020316749" expanded="true" signature="29305:29336" ph="..." />
-            <marker date="1510020316749" expanded="true" signature="32076:32108" ph="..." />
-            <marker date="1510020316749" expanded="true" signature="32451:32465" ph="..." />
-            <marker date="1510020316749" expanded="true" signature="33269:33279" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssp/application/common/logic/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssp/ssp.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssp/think">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssp/application/admin/controller/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/Public/js/my/mypublish.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/Controller/IndexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2075">
-          <caret line="59" column="5" lean-forward="false" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
-          <folding>
-            <element signature="e#358#1824#0#PHP" expanded="false" />
-            <element signature="e#1830#1896#0#PHP" expanded="false" />
-            <element signature="e#1902#2790#0#PHP" expanded="false" />
-            <element signature="e#2869#3853#0#PHP" expanded="false" />
-            <element signature="e#3935#4815#0#PHP" expanded="false" />
-            <element signature="e#4905#5456#0#PHP" expanded="false" />
-            <element signature="e#6224#6789#0#PHP" expanded="false" />
-            <element signature="e#9607#10458#0#PHP" expanded="false" />
-            <element signature="e#10561#11552#0#PHP" expanded="false" />
-            <element signature="e#11655#12015#0#PHP" expanded="false" />
-            <element signature="e#12175#19601#0#PHP" expanded="false" />
-            <element signature="e#19782#23674#0#PHP" expanded="false" />
-            <element signature="e#23677#24798#0#PHP" expanded="false" />
-            <element signature="e#24803#26243#0#PHP" expanded="false" />
-            <marker date="1509958845571" expanded="true" signature="16142:16366" ph="..." />
-            <marker date="1509958845571" expanded="true" signature="20189:21156" ph="SELECT Publi... weipai_publish" />
-            <marker date="1509958845571" expanded="true" signature="25118:26086" ph="SELECT Publi... weipai_publish" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssp/application/admin/controller/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-375">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Index/recommend.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-542">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/My/mypublish.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="183" column="76" lean-forward="false" selection-start-line="183" selection-start-column="76" selection-end-line="183" selection-end-column="76" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/My/ajax_mypublish.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#a#0;n#div#0;n#volist#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#a#0;n#div#0;n#volist#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssp/application/admin/controller/Menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/Controller/MyController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="102" column="5" lean-forward="true" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
-          <folding>
-            <element signature="e#1588#3088#0#PHP" expanded="false" />
-            <element signature="e#3094#3163#0#PHP" expanded="false" />
-            <element signature="e#4203#4344#0#PHP" expanded="false" />
-            <element signature="e#5912#6045#0#PHP" expanded="false" />
-            <element signature="e#6071#6315#0#PHP" expanded="false" />
-            <element signature="e#6322#6483#0#PHP" expanded="false" />
-            <element signature="e#6490#7237#0#PHP" expanded="false" />
-            <element signature="e#7241#8209#0#PHP" expanded="false" />
-            <element signature="e#8229#8338#0#PHP" expanded="false" />
-            <element signature="e#8361#8468#0#PHP" expanded="false" />
-            <element signature="e#8488#8594#0#PHP" expanded="false" />
-            <element signature="e#8620#8884#0#PHP" expanded="false" />
-            <element signature="e#8906#9362#0#PHP" expanded="false" />
-            <element signature="e#9382#9734#0#PHP" expanded="false" />
-            <element signature="e#9756#11013#0#PHP" expanded="false" />
-            <element signature="e#11709#13474#0#PHP" expanded="false" />
-            <element signature="e#13477#14674#0#PHP" expanded="false" />
-            <element signature="e#14804#18449#0#PHP" expanded="false" />
-            <element signature="e#18455#18600#0#PHP" expanded="false" />
-            <element signature="e#18606#18755#0#PHP" expanded="false" />
-            <marker date="1510034283459" expanded="true" signature="14953:16179" ph="SELECT Publi... weipai_publish" />
-            <marker date="1510034283459" expanded="true" signature="15976:16158" ph="SELECT id FR... weipai_user" />
-            <marker date="1510034283459" expanded="true" signature="16024:16149" ph="SELECT publi... weipai_publish" />
-            <marker date="1510034283459" expanded="true" signature="16085:16139" ph="SELECT publi... weipai_favorite" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ssp/admin_themes/apps/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="196">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
