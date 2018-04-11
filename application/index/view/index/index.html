@@ -6,13 +6,15 @@
     <input type="button" id= "save" value = "save"></input>
     <input type="button" id= "color" value="color"></input>  -->
 
-    <input type="button" value="size">
-    <input type="text" id="size" onchange="sizeChange()">
-    <input type="button" id="clear" value="clear">
-    <input type="button" value="restore" onclick="back()">
-    <input type="button" id="eraser" value="eraser" onclick="doEraser()">
+    <input type="button" value="粗细">
+    <input type="number" id="size" onchange="sizeChange()" min="1" max="100" value="1">
+    <input type="button" value="透明度">
+    <input type="number" id="global" onchange="globalChange()" min="1" max="100" value="100">
+    <input type="button" id="clear" value="清空" onclick="clearCanvas()">
+    <input type="button" value="撤销" onclick="back()">
+    <input type="button" id="eraser" value="橡皮" onclick="doEraser()">
     <select id="shape" onchange="shapeChange()">
-        <option value="2">铅笔</option>
+        <option value="2">画笔</option>
         <option value="1">矩形</option>
         <option value="0">圆形</option>
     </select>

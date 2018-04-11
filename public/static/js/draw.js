@@ -10,6 +10,7 @@ if(height>800) height=800;
 myCanvas.setAttribute("width",width);//初始化宽
 myCanvas.setAttribute("height",height);//初始化高
 
+
 var data;//storing last canv2as' content
 context.strokeStyle = "black";
 context.strokeWidth = 1;
@@ -32,9 +33,15 @@ function doEraser() {
  * 线条粗细
  */
 function sizeChange() {
-
     context.lineWidth = parseInt(document.getElementById('size').value);
 
+}
+
+/**
+ * 透明度
+ */
+function globalChange(){
+    context.globalAlpha=parseInt(document.getElementById('global').value)/100;
 }
 
 function shapeChange() {
@@ -47,6 +54,19 @@ function shapeChange() {
 
 }
 
+/**
+ * 清除画布
+ */
+function clearCanvas(){
+    data = context.getImageData(0, 0, width, height);
+    restore.push(data);
+    context.clearRect(0,0,width,height);
+}
+
+
+/**
+ 撤销
+ */
 var restore = [];
 
 function back() {
@@ -119,7 +139,6 @@ function myCanvasMouseUp(event) {
 
         lastX = event.offsetX;
         lastY = event.offsetY;
-        console.log(event);
         if(lastX==null){
             lastX = event.changedTouches[0].clientX;
             lastY = event.changedTouches[0].clientY-140;
