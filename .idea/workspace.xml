@@ -23,21 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/database.php">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/index/view/index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="webdraw.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/webdraw.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="15">
+              <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -94,8 +84,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/Desktop/BDLSSL/js/external/babel-support.min.js" />
-        <option value="$USER_HOME$/Desktop/BDLSSL/js/ui.js" />
         <option value="$USER_HOME$/Desktop/BDLSSL/js/ria.js" />
         <option value="$USER_HOME$/Desktop/BDLSSL/js/main.js" />
         <option value="$USER_HOME$/Desktop/BDLSSL/js/performance.min.js" />
@@ -144,7 +132,9 @@
         <option value="$PROJECT_DIR$/../rrwp/App/Home/View/My/ajax_mypublish.html" />
         <option value="$PROJECT_DIR$/../rrwp/Public/js/my/mypublish.js" />
         <option value="$PROJECT_DIR$/../rrwp/App/Home/Controller/MyController.class.php" />
+        <option value="$PROJECT_DIR$/application/admin/view/common/top.html" />
         <option value="$PROJECT_DIR$/application/webdraw.sql" />
+        <option value="$PROJECT_DIR$/application/index/view/index/index.html" />
       </list>
     </option>
   </component>
@@ -161,8 +151,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="131" />
-    <option name="y" value="162" />
+    <option name="x" value="980" />
+    <option name="y" value="308" />
     <option name="width" value="1497" />
     <option name="height" value="868" />
   </component>
@@ -194,6 +184,27 @@
               <item name="webdraw" type="b2602c69:ProjectViewProjectNode" />
               <item name="webdraw" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="webdraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdraw" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="webdraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdraw" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="webdraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webdraw" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -392,12 +403,12 @@
       <workItem from="1509671777111" duration="27999000" />
       <workItem from="1509934323341" duration="25615000" />
       <workItem from="1510018283418" duration="12417000" />
-      <workItem from="1523413104792" duration="1291000" />
+      <workItem from="1523413104792" duration="2384000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="623242000" />
+    <option name="totallyTimeSpent" value="624335000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -409,7 +420,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="131" y="162" width="1497" height="868" extended-state="0" />
+    <frame x="980" y="308" width="1497" height="868" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20756014" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -471,9 +482,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/Controller/ArticleController.class.php" />
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/Controller/BaseController.class.php" />
-    <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Main/ajax_publish.html" />
     <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Main/ajax_shake.html" />
     <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Main/shake.html" />
     <entry file="file://$PROJECT_DIR$/../rrwp/App/Home/View/Main/moments.html" />
@@ -541,10 +549,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/admin/view/common/nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/webdraw.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="211">
+          <caret line="19" column="127" lean-forward="false" selection-start-line="19" selection-start-column="127" selection-end-line="19" selection-end-column="127" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/admin/view/common/top.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
           <folding />
         </state>
       </provider>
