@@ -15,15 +15,16 @@ class Login extends Controller
 {
     public function index(){
         if(session('user')&&session('user')!=null){
-            jump('/erciyuan/public/Index.php/Index');
+            jump('/Index');
         }else{
-            $style_id=config('setting.default_style');
-            if(session('style_id')&&session('style_id')!=null){
-                $style_id=session('style_id');
-            }
-            $style=model('Style')->find($style_id);
-            $this->assign('styleAddress',$style['address']);
-            return $this->fetch();
+            return $this->fetch('/login/login');
+        }
+    }
+    public function reg(){
+        if(session('user')&&session('user')!=null){
+            jump('/Index');
+        }else{
+            return $this->fetch('/login/register');
         }
     }
     public function checklogin(){
@@ -33,6 +34,33 @@ class Login extends Controller
         }else{
             return json(['status'=>1,'message'=>'登录成功']);
         }
+    }
+    public function register(){
+        $data=input();
+        if(!$data['username']||trim($data['username'])==''){
+            return json(['status'=>0,'message'=>'请输入账号']);
+        }
+        if(!$data['password']||trim($data['password'])==''){
+            return json(['status'=>0,'message'=>'请输入密码']);
+        }
+        if(trim($data['password'])!=trim($data['repassword'])){
+            return json(['status'=>0,'message'=>'两次密码不一致']);
+        }
+        $user=model('User')->get(['username'=>$data['username']]);
+        if($user){
+            return json(['status'=>0,'message'=>'账号已注册']);
+        }
+        $u['lastlogin_time']=time();
+        $u['create_time']=time();
+        $u['username']=$data['username'];
+        $u['password']=md5(config('setting.md5_pre').$data['password']);
+        $id=model("User")->isUpdate(false)->save($u);
+        if($id){
+            return json(['status'=>1,'message'=>'注册成功']);
+        }else{
+            return json(['status'=>0,'message'=>'注册失败']);
+        }
+
     }
     public function check($data){
         if(!$data['username']||trim($data['username'])==''){
@@ -52,7 +80,7 @@ class Login extends Controller
             return ['status'=>0,'message'=>'密码错误'];
         }
         session('user', $user);
-        $a['lastlogin_time']=time();
+        $u['lastlogin_time']=time();
         $u['id']=$user['id'];
         model("User")->isUpdate(true)->save($u);
         return true;
@@ -62,7 +90,7 @@ class Login extends Controller
         if(session('user')==null){
             return json(['status'=>1,'message'=>'退出成功','jump_url'=>$_SERVER['HTTP_REFERER']]);
         }else {
-            return json(['status' => 1, 'message' => '退出失败']);
+            return json(['status' => 0, 'message' => '退出失败']);
         }
     }
 }

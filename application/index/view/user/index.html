@@ -5,6 +5,7 @@
 <div class="am-g am-g-fixed blog-fixed blog-content">
     <div class="am-u-sm-12">
         <h1 class="blog-text-center">-- 个人中心 --</h1>
+        <a><div class="loginout">退出登录</div></a>
         <div class="choose-info">
             <a href="/index/user/index?type=news">
                 <div {if condition="$type eq 'news'" }class="active" {/if}>发帖记录</div>
@@ -60,4 +61,5 @@
 </div>
 <!-- content end -->
 {include file="common/footer"}
+<script src="__STATIC__/js/login.js"></script>
 </body>

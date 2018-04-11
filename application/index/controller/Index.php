@@ -1,11 +1,13 @@
 <?php
 namespace app\index\controller;
+use think\Controller;
 
-class Index extends Common
+class Index extends Controller
 {
     public function index()
     {
-        $data['status']=self::$status;
+        $this->assign('menu','index');
+        $this->assign('title',input('title'));
         $this->assign('menu','index');
         return $this->fetch();
     }
