@@ -7,10 +7,11 @@
  */
 
 namespace app\index\controller;
+use think\Controller;
 
-
-class News extends Common
+class News extends Controller
 {
+    protected static $status = array('eq',1);
     public function index($page=1){
         $data['status']=self::$status;
         if(input('title')){
@@ -44,9 +45,13 @@ class News extends Common
         return $this->fetch();
     }
     public function comment(){
+        if(!session('user')||session('user')==null){
+            return json(['status'=>0,'message'=>'请先登录']);
+        }
         $msg=validate('comment')->gocheck('add');
         if(!is_array($msg)){
             $d=request()->param();
+            $d['user_id']=session('user')['id'];
             $d['create_time']=time();
             $d['update_time']=$d['create_time'];
             $comment=model('Comment')->create($d);
@@ -59,5 +64,27 @@ class News extends Common
             return json($msg);
         }
         return json($msg);
+    }
+    public function save(){
+        if(!session('user')||session('user')==null){
+            return json(['status'=>0,'message'=>'请先登录']);
+        }
+        $data=validate('News')->goCheck('user-add');
+        if(!is_array($data)){
+            $d=request()->param();
+            $d['user_id']=session('user')['id'];
+            $d['status']=1;
+            $d['create_time']=time();
+            $d['update_time']=$d['create_time'];
+            $id=model('News')->create($d);
+            if($id){
+                return json(['status'=>1,'message'=>'添加成功']);
+            }else{
+                return json(['status'=>0,'message'=>'添加失败']);
+            }
+        }else{
+            return json($data);
+        }
+        return json($data);
     }
 }

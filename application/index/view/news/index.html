@@ -5,28 +5,87 @@
 <div class="am-g am-g-fixed blog-fixed">
     <div class="am-u-md-12 am-u-sm-12">
         {volist name='news' id='new'}
-        <article class="am-g blog-entry-article">
-            <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
-                <a href="/index/news/detail?id={$new.id}"><img src="{$new.thumb}" alt="" class="am-u-sm-12"></a>
-            </div>
-            <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
-                <span><a href="" class="blog-color">{$tags[$new.tags]} &nbsp;</a></span>
-                <span> @{$new.user.name} &nbsp;</span>
-                <span>{$new.update_time}</span>
-                <h1><a href="/index/news/detail?id={$new.id}">{$new.title}</a></h1>
-                <p>{$new.content|getcontent}
-                </p>
-                <p><a href="" class="blog-continue">continue reading</a></p>
-            </div>
-        </article>
+            <article class="am-g blog-entry-article">
+                <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
+                    <a href="/index/news/detail?id={$new.id}"><img src="{$new.thumb}" alt="" class="am-u-sm-12"></a>
+                </div>
+                <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
+                    <span><a href="" class="blog-color">{$tags[$new.tags]} &nbsp;</a></span>
+                    <span> @{$new.user.name} &nbsp;</span>
+                    <span>{$new.update_time}</span>
+                    <h1><a href="/index/news/detail?id={$new.id}">{$new.title}</a></h1>
+                    <p>{$new.content|getcontent}
+                    </p>
+                    <p><a href="" class="blog-continue">continue reading</a></p>
+                </div>
+            </article>
         {/volist}
         <ul class="am-pagination">
             {if condition="$page gt 1"}<li class="am-pagination-prev"><a href="/index/news?page={$page-1}">&laquo; Prev</a></li>{/if}
             {if condition="$page lt $count"}<li class="am-pagination-next"><a href="/index/news?page={$page+1}">Next &raquo; </a></li>{/if}
         </ul>
+        <form class="am-form am-g" id="form">
+            <h3 class="blog-comment">发帖</h3>
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label" for="news_title">文章标题</label>
+                    <div class="controls">
+                        <input type="text" class="input-xlarge" id="news_title" name="title" value="" placeholder="请填写文章标题">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">选择标签</label>
+                    <div class="controls">
+                        <select class="btn" name="tags">
+                            <option value="">请选择标签</option>
+                            {foreach name="tags" item="tag" k="key"}
+                                <option value="{$key}">{$tag}</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">封面图</label>
+                    <div class="controls">
+                        <input id="file_upload_img" type="file" multiple="true">
+                        <img  style="display: none;" id="upload_org_code_img" src="" width="120" height="100">
+                        <input id="file_upload_image" name="thumb" type="hidden" multiple="true" value="">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="editor">文章内容</label>
+                    <div class="controls">
+                        <script id="editor" type="text/plain" name="content" style="width:100%;height:300px;"></script>
+                    </div>
+                </div>
+                    <p><input class="am-btn am-btn-default" id="submit" value="发表帖子" type="button"></p>
+            </fieldset>
+        </form>
     </div>
 
 </div>
 <!-- content end -->
 {include file="common/footer"}
+<script src="__STATIC__/uploadify/jquery.uploadify.js"></script>
+    <script src="__STATIC__/js/image.js"></script>
+    <script type="text/javascript" src="__STATIC__/ueditor/1.4.3/ueditor.config.js"></script>
+    <script type="text/javascript" src="__STATIC__/ueditor/1.4.3/ueditor.all.min.js"> </script>
+    <script type="text/javascript" src="__STATIC__/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+    <!--分配编辑器-->
+    <script>
+        $(function(){
+            var ue = UE.getEditor('editor');
+        });
+    </script>
+    <script type="text/javascript">
+        var SCOPE = {
+            'save_url': '__INDEX__/news/save',
+            'jump_url': '__INDEX__/news',
+            'ajax_upload_image_url': '__ADMIN__/upload/image',
+            'ajax_upload_swf': '__STATIC__/uploadify/uploadify.swf'
+        };
+    </script>
 </body>

@@ -2,10 +2,20 @@
 <body>
 {include file="common/top"}
 <!-- content srart -->
+
 <div class="am-g am-g-fixed blog-fixed blog-content">
     <div class="am-u-sm-12">
         <h1 class="blog-text-center">-- 个人中心 --</h1>
-        <a><div class="loginout">退出登录</div></a>
+        <div class="am-g blog-author blog-article-margin">
+            <div class="am-u-sm-3 am-u-md-3 am-u-lg-2" style="text-align: center;">
+                <img src="{$user.face}" alt="" class="blog-author-img am-circle">
+            </div>
+            <a><div class="loginout">退出登录</div></a>
+            <div class="am-u-sm-9 am-u-md-9 am-u-lg-10">
+                <h3><span>{$user.name} &nbsp;by &nbsp;</span>
+                <p> {$user.name} </p>
+            </div>
+        </div>
         <div class="choose-info">
             <a href="/index/user/index?type=news">
                 <div {if condition="$type eq 'news'" }class="active" {/if}>发帖记录</div>
@@ -14,7 +24,7 @@
             <div {if condition="$type eq 'draw'" }class="active" {/if}>绘画记录</div>
     </a>
 </div>
-<div class="timeline-year">
+<div class="timeline-year tbody">
     {volist name="datas" id="data" key='k' }
     {if condition="$k eq 1"}
     <h1>{$data.update_time|substr=###,0,4}</h1>
@@ -41,7 +51,7 @@
                 <span class="am-u-sm-4 am-u-md-2 timeline-span">{$data.update_time|substr=###,5}</span>
                 <span class="am-u-sm-8 am-u-md-6"><a href="/index/news/index?id={$data.id}">{$data.title}</a></span>
                 <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">{$data.user.name}</span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">删除</span>
+                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only"><a id="delete" class="active" style="cursor: pointer" attr-id="{$data.id}">删除</a></span>
             </li>
                 {if condition="$k eq $count"}
                 </ul>
@@ -61,5 +71,12 @@
 </div>
 <!-- content end -->
 {include file="common/footer"}
+<script src="__STATIC__/js/common.js"></script>
 <script src="__STATIC__/js/login.js"></script>
+<script>
+    var SCOPE = {
+        'status_url': '__ADMIN__/news/status',
+        'delete_url': '__ADMIN__/news/status'
+    }
+</script>
 </body>

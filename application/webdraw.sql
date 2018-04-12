@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS `wd_user`(
     `username` VARCHAR(30) UNIQUE NOT NULL,
     `password` CHAR(32) NOT NULL,
     `name` VARCHAR(30) ,
+    `face` VARCHAR(50) NOT NULL DEFAULT '/static/image/face.png' ,
     `tel` CHAR(11) ,
     `email` VARCHAR(30) ,
     `status` TINYINT(1) NOT NULL DEFAULT 1,

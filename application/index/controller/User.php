@@ -14,10 +14,13 @@ class User extends Common
 
     public function index($type='news'){
         $data['status']=self::$status;
+        $data['user_id']=session('user')['id'];
         if(input('title')){
             $data['title']=array('like','%'.input('title').'%');
         }
         $this->assign('title',input('title'));
+        $user=model('user')->find($data['user_id']);
+        $this->assign('user',$user);
         if($type=='news'){
             $datas=model('news')->where($data)->select();
             $count=model('news')->where($data)->count();

@@ -7,10 +7,11 @@
  */
 
 namespace app\index\controller;
+use think\Controller;
 
-
-class Draw extends Common
+class Draw extends Controller
 {
+    protected static $status = array('eq',1);
     public function index($page=1){
         $data['status']=self::$status;
         if(input('title')){

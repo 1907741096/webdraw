@@ -36,8 +36,8 @@
                     <img src="{$comment.user.face}" alt="" class="blog-author-img am-circle">
                 </div>
                 <div class="am-u-sm-9 am-u-md-9 am-u-lg-10">
-                    <h3><span>{$comment.user.name} &nbsp;: &nbsp;</span><span class="blog-color">{$comment.content}</span></h3>
-                    <p> {$comment.create_time} </p>
+                    <h3><span>{$comment.user.name} &nbsp;by &nbsp;</span><span class="blog-color">{$comment.create_time}</span></h3>
+                    <p> {$comment.content} </p>
                 </div>
             </div>
 
@@ -56,7 +56,6 @@
                 <div class="am-form-group">
                     <textarea class="" rows="5" placeholder="不超过140字" name="content"></textarea>
                 </div>
-                <input type="hidden" name="user_id" value="{$user_id}">
                 <input type="hidden" name="news_id" value="{$new.id}">
                 <p><input class="am-btn am-btn-default" id="submit" value="发表评论" type="button"></p>
             </fieldset>
