@@ -34,4 +34,22 @@ class User extends Common
         $this->assign('menu','user');
         return $this->fetch();
     }
+    public function save(){
+        if(!session('user')||session('user')==null){
+            return json(['status'=>0,'message'=>'请先登录']);
+        }
+        $data=validate('User')->goCheck('user-edit');
+        if(!is_array($data)){
+            $d=request()->param();
+            $d['id']=session('user')['id'];
+            $id=model('User')->isUpdate(true)->save($d);
+            if($id){
+                return json(['status'=>0,'message'=>'保存成功']);
+            }else{
+                return json(['status'=>0,'message'=>'保存失败']);
+            }
+        }else{
+            return json($data);
+        }
+    }
 }

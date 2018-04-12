@@ -510,3 +510,12 @@ h1 span{
 .loginout .active{
     color: #10D07A;
 }
+.swfupload{
+    border:1px solid #10D07A;
+    border-radius: 10px;
+}
+.uploadify-button {
+    text-align: center;
+    color: #10D07A;
+    font-size: 15px;
+}

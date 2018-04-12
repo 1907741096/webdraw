@@ -7,14 +7,24 @@
     <div class="am-u-sm-12">
         <h1 class="blog-text-center">-- 个人中心 --</h1>
         <div class="am-g blog-author blog-article-margin">
-            <div class="am-u-sm-3 am-u-md-3 am-u-lg-2" style="text-align: center;">
-                <img src="{$user.face}" alt="" class="blog-author-img am-circle">
-            </div>
-            <a><div class="loginout">退出登录</div></a>
-            <div class="am-u-sm-9 am-u-md-9 am-u-lg-10">
-                <h3><span>{$user.name} &nbsp;by &nbsp;</span></h3>
-                <p> {$user.name} </p>
-            </div>
+            <form class="am-form am-g" id="form">
+                <fieldset>
+                    <div class="am-u-sm-3 am-u-md-3 am-u-lg-2" style="text-align: center;">
+                        <img src="{$user.face}" alt="" class="blog-author-img am-circle">
+                    </div>
+                    <a><div class="loginout">退出登录</div></a>
+                    <div class="am-u-sm-9 am-u-md-9 am-u-lg-10">
+                        <div class="am-form-group am-u-sm-4 blog-clear-left">
+                            <input type="text" class="" placeholder="名字" value="{$user.name}" name="name">
+                        </div>
+                    </div>
+                    <div class="am-u-sm-9 am-u-md-9 am-u-lg-10">
+                        <div class="am-form-group am-u-sm-4 blog-clear-left">
+                            <input type="button" class="am-btn am-btn-default" value="保存信息" id="submit">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
         </div>
         <div class="choose-info">
             <a href="/index/user/index?type=news">
@@ -60,7 +70,6 @@
                     </ul>
                         {/if}
                         {/if}
-        <br>
 
         {/volist}
 </div>
@@ -71,12 +80,13 @@
 </div>
 <!-- content end -->
 {include file="common/footer"}
-<script src="__STATIC__/js/common.js"></script>
 <script src="__STATIC__/js/login.js"></script>
 <script>
     var SCOPE = {
         'status_url': '__ADMIN__/news/status',
-        'delete_url': '__ADMIN__/news/status'
+        'delete_url': '__ADMIN__/news/status',
+        'save_url': '__INDEX__/user/save',
+        'jump_url': '__INDEX__/user'
     }
 </script>
 </body>

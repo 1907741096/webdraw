@@ -21,6 +21,7 @@ class User extends Base
         'id'=>['id'],
         'add'=>['name','username'],
         'edit'=>['id','name'],
+        'user-edit'=>['name'],
         'status'=>['id','status']
     ];
 }
