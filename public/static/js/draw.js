@@ -10,6 +10,8 @@ if(height>800) height=800;
 myCanvas.setAttribute("width",width);//初始化宽
 myCanvas.setAttribute("height",height);//初始化高
 
+var postArr=[];
+var length=0;
 
 var data;//storing last canv2as' content
 context.strokeStyle = "black";
@@ -59,6 +61,8 @@ function shapeChange() {
  */
 function clearCanvas(){
     data = context.getImageData(0, 0, width, height);
+    postArr=[];
+    length=0;
     restore.push(data);
     context.clearRect(0,0,width,height);
 }
@@ -71,6 +75,8 @@ var restore = [];
 
 function back() {
     context.putImageData(restore.pop(), 0, 0);
+    postArr.pop();
+    length--;
 }
 
 /**
@@ -86,6 +92,13 @@ function myCanvasMouseDown(event) {
             orignalY = event.targetTouches[0].pageY-140;
         }
         context.moveTo(orignalX, orignalY);
+        postArr[length]=[];
+        postArr[length]['line']=[];
+        postArr[length]['line'].push([orignalX,orignalY]);
+        postArr[length]['status']=shap;
+        postArr[length]['color']=context.strokeStyle;
+        postArr[length]['size']=context.lineWidth;
+        postArr[length]['global']=context.globalAlpha;
         restore.push(data);
         isMouseDown = true;
 }
@@ -103,6 +116,7 @@ function myCanvasMouseMove(event) {
                 context.putImageData(data, 0, 0);
                 lastX = event.offsetX;
                 lastY = event.offsetY;
+                postArr[length]['line'].push([lastY,lastY]);
                 context.beginPath();
                 context.arc(orignalX + (lastX - orignalX) / 2, orignalY + (lastY - orignalY) / 2, Math.abs(lastX - orignalX) / 2, 0, Math.PI * 2, true);
                 context.stroke();
@@ -113,6 +127,7 @@ function myCanvasMouseMove(event) {
                 context.putImageData(data, 0, 0);
                 lastX = event.offsetX;
                 lastY = event.offsetY;
+                postArr[length]['line'].push([lastY,lastY]);
                 context.strokeRect(orignalX, orignalY, lastX - orignalX, lastY - orignalY);
                 break;
             case 2:
@@ -122,6 +137,7 @@ function myCanvasMouseMove(event) {
                     lastX = event.targetTouches[0].pageX;
                     lastY = event.targetTouches[0].pageY-140;
                 }
+                postArr[length]['line'].push([lastY,lastY]);
                 context.lineTo(lastX, lastY); //根据鼠标路径绘画
                 context.stroke(); //立即渲染
                 break;
@@ -161,6 +177,8 @@ function myCanvasMouseUp(event) {
 
                 break;
         }
+        postArr[length]['line'].push([lastY,lastY]);
+        length++;
         isMouseDown = false;
         lastX = null;
         lastY = null;
@@ -171,6 +189,7 @@ function myCanvasMouseUp(event) {
         context.clearRect(0, 0, width, height);
         context.putImageData(data, 0, 0);
         context.closePath();
+        console.log(postArr);
     }
 }
 myCanvas.addEventListener("mousedown", myCanvasMouseDown, false);
@@ -181,14 +200,32 @@ myCanvas.addEventListener("touchstart", myCanvasMouseDown, false);
 myCanvas.addEventListener("touchmove", myCanvasMouseMove, false);
 myCanvas.addEventListener("touchend", myCanvasMouseUp, false);
 
-//   var img=new Image()
-// img.src="https://www.wzyhome.date/erciyuan/Public/editor/20180326/1522043600859516.jpg"
-// context.drawImage(img,0,0,width,height);
-// var imgs = new Image();
-// imgs.src = "https://www.wzyhome.date/erciyuan/Public/editor/20180326/1522043600859516.jpg";
-// imgs.onload = createPat;//图片加载完成再执行
-// function createPat(){
-//     var bg = context.createPattern(imgs,"no-repeat");
-//     context.fillStyle = bg;
-//     context.fillRect(0,0,500,500);
-// }
+
+function openImage(thumb){
+    var img = new Image();
+    img.src = thumb;
+    img.onload=function(){
+        context.drawImage(img,0,0,width,height);
+    }
+}
+
+$('#file_upload_img').uploadify({
+    'swf'      : '/static/uploadify/uploadify.swf',
+    'uploader' : '/index/index/openImage',
+    'buttonText': '打开图片',
+    'fileTypeDesc': 'Image Files',
+    'fileObjName' : 'file',
+    //允许上传的文件后缀
+    'fileTypeExts': '*.gif; *.jpg; *.png',
+    'onUploadSuccess' : function(file,data,response) {
+        // response true ,false
+        if(response) {
+            var obj = JSON.parse(data); //由JSON字符串转换为JSON对象
+            $('#' + file.id).find('.data').html(' 打开成功');
+
+            openImage(obj.thumb);
+        }else{
+            alert('打开失败');
+        }
+    },
+});

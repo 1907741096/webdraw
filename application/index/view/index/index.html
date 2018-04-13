@@ -18,11 +18,12 @@
         <option value="1">矩形</option>
         <option value="0">圆形</option>
     </select>
-
-
     <input id="color" type="color"/>
+    <input id="file_upload_img" type="file" multiple="true">
+
     <canvas id="myCanvas" style="border:1px solid #ddd;"></canvas>
 </div>
-<script language="JavaScript" src="__STATIC__/js/draw.js"></script>
 {include file="common/footer"}
+<script src="__STATIC__/uploadify/jquery.uploadify.js"></script>
+<script language="JavaScript" src="__STATIC__/js/draw.js"></script>
 </body>
