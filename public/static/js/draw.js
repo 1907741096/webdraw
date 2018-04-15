@@ -92,7 +92,7 @@ function myCanvasMouseDown(event) {
             orignalY = event.targetTouches[0].pageY-140;
         }
         context.moveTo(orignalX, orignalY);
-        postArr[length]=[];
+        postArr[length]={};
         postArr[length]['line']=[];
         postArr[length]['line'].push([orignalX,orignalY]);
         postArr[length]['status']=shap;
@@ -137,7 +137,7 @@ function myCanvasMouseMove(event) {
                     lastX = event.targetTouches[0].pageX;
                     lastY = event.targetTouches[0].pageY-140;
                 }
-                postArr[length]['line'].push([lastY,lastY]);
+                postArr[length]['line'].push([lastX,lastY]);
                 context.lineTo(lastX, lastY); //根据鼠标路径绘画
                 context.stroke(); //立即渲染
                 break;
@@ -177,7 +177,7 @@ function myCanvasMouseUp(event) {
 
                 break;
         }
-        postArr[length]['line'].push([lastY,lastY]);
+        postArr[length]['line'].push([lastX,lastY]);
         length++;
         isMouseDown = false;
         lastX = null;
@@ -189,7 +189,6 @@ function myCanvasMouseUp(event) {
         context.clearRect(0, 0, width, height);
         context.putImageData(data, 0, 0);
         context.closePath();
-        console.log(postArr);
     }
 }
 myCanvas.addEventListener("mousedown", myCanvasMouseDown, false);
@@ -207,6 +206,22 @@ function openImage(thumb){
     img.onload=function(){
         context.drawImage(img,0,0,width,height);
     }
+}
+
+function save(){
+    var postData={};
+    postData['thumb']=myCanvas.toDataURL();
+    postData['content']=postArr;
+    postData['title']=document.getElementById('title').value;
+    $.post('/index/index/save',postData,function(result){
+        if(result.status == 1) {
+            //成功
+            dialog.success(result.message,'/index/draw');
+        }else if(result.status == 0) {
+            // 失败
+            dialog.error(result.message);
+        }
+    },"JSON");
 }
 
 $('#file_upload_img').uploadify({

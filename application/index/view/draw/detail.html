@@ -1,0 +1,18 @@
+{include file="common/head"}
+<body>
+{include file="common/top"}
+<div class="am-g am-g-fixed blog-fixed">
+    <input type="button" value="演示" onclick="show()">
+    <canvas id="myCanvas" style="border:1px solid #ddd;"></canvas>
+</div>
+{include file="common/footer"}
+<script>
+    var arr=[];
+    var postData={};
+    postData['id']={$draw.id};
+    $.post('/index/draw/info',postData,function(result){
+        arr=result;
+    },"JSON");
+</script>
+<script language="JavaScript" src="__STATIC__/js/show.js"></script>
+</body>

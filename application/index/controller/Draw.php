@@ -19,7 +19,7 @@ class Draw extends Controller
         }
         $this->assign('title',input('title'));
 //        $draws=model('draw')->getAllDraws(config('setting.page_count'),$data);
-        $draws=model('draw')->where($data)->select();
+        $draws=model('draw')->where($data)->order('id desc')->select();
         $count=model('draw')->where($data)->count();
         $this->assign('count',ceil($count/config('setting.page_count')));
         $this->assign('draws',$draws);
@@ -28,16 +28,23 @@ class Draw extends Controller
         return $this->fetch();
     }
     public function detail(){
-        $msg=validate('news')->gocheck('id');
+        $msg=validate('draw')->gocheck('id');
         if(is_array($msg)){
             return $this->puterror($msg['message']);
         }
         $this->assign('title',input('title'));
         $id=input('id');
-        $data['status']=self::$status;
         $data['id']=$id;
-        $new=model('news')->find($data);
-        $this->assign('new',$new);
+        $draw=model('draw')->find($data);
+        $this->assign('menu','draw');
+        $this->assign('draw',$draw);
         return $this->fetch();
+    }
+    public function info(){
+        $id=input('id');
+        $data['id']=$id;
+        $draw=model('draw')->find($data);
+        $content=json_decode($draw['content']);
+        return json($content);
     }
 }
