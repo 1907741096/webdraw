@@ -47,22 +47,11 @@ CREATE TABLE IF NOT EXISTS `wd_news`(
 )DEFAULT CHARSET = utf8;
 
 DROP TABLE IF EXISTS `wd_draw`;
-CREATE TABLE IF NOT EXISTS `wd_draw`(
-    `id` INT PRIMARY KEY AUTO_INCREMENT,
-    `user_id` INT NOT NULL,
-    `title` VARCHAR(50) NOT NULL,
-    `thumb` VARCHAR(255) NOT NULL,
-    `create_time` INT NOT NULL,
-    `update_time` INT NOT NULL,
-    `status` TINYINT(1) NOT NULL DEFAULT 0
-)DEFAULT CHARSET = utf8;
-
-DROP TABLE IF EXISTS `wd_content`;
 CREATE TABLE IF NOT EXISTS `wd_content`(
     `id` INT PRIMARY KEY AUTO_INCREMENT,
     `user_id` INT NOT NULL,
     `title` VARCHAR(50) NOT NULL,
-    `thumb` VARCHAR(255) NOT NULL,
+    `thumb` MEDIUMTEXT NOT NULL,
     `content` MEDIUMTEXT NOT NULL,
     `create_time` INT NOT NULL,
     `update_time` INT NOT NULL,
