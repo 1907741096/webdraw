@@ -15,7 +15,6 @@ class Upload extends Base
 {
     public function image(){
         $file=request()->file('file');
-        var_dump($file);exit;
         $info=$file->move('upload'); //给定一个目录
         if($info&&$info->getPathname()){
             return json([

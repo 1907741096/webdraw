@@ -228,14 +228,14 @@ function save(){
     var formdata=new FormData();
     formdata.append('file',blob);
     $.ajax({
-        url : '/admin/upload/image',
+        url : '/index/index/image',
         data :  formdata,
         processData : false,
         contentType : false,
         dataType: 'json',
         type : "POST",
         success : function(data){
-
+            console.log(data);
         }
     });
     console.log(formdata);return;
