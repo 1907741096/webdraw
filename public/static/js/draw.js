@@ -208,11 +208,23 @@ function openImage(thumb){
     }
 }
 
+function convertBase64UrlToBlob(urlData,type){
+    var bytes=window.atob(urlData.split(',')[1]);        //去掉url的头，并转换为byte
+    //处理异常,将ascii码小于0的转换为大于0
+    var ab = new ArrayBuffer(bytes.length);
+    var ia = new Uint8Array(ab);
+    for (var i = 0; i < bytes.length; i++) {
+        ia[i] = bytes.charCodeAt(i);
+    }
+    return new Blob( [ab] , {type : 'image/'+type});
+}
+
 function save(){
     var postData={};
-    postData['thumb']=myCanvas.toDataURL();
-    postData['content']=postArr;
+    // postData['thumb']=myCanvas.toDataURL();
     postData['title']=document.getElementById('title').value;
+    postData['content']=postArr;
+    console.log(postData);
     $.post('/index/index/save',postData,function(result){
         if(result.status == 1) {
             //成功

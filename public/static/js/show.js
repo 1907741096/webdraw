@@ -16,17 +16,14 @@ var data;
 
 function show(){
    for(var i in arr){
-       context.strokeStyle = arr[i].color;
-       context.lineWidth= arr[i].size;
-       context.globalAlpha=arr[i].global;
-       choose(arr[i].status,arr[i].line);
+       choose(arr[i].status,arr[i].color,arr[i].size,arr[i].global,arr[i].line);
    }
 }
 
-function choose(status,line){
+function choose(status,color,size,global,line){
     for(var j in line){
         if(j==0){
-            setTimeout("drawbegin("+status+","+line[j][0]+","+line[j][1]+")",time);
+            setTimeout("drawbegin("+status+",'"+color+"',"+size+","+global+","+line[j][0]+","+line[j][1]+")",time);
             time+=300;
         }else if(j== line.length-1){
             setTimeout("drawend("+status+","+line[j][0]+","+line[j][1]+")",time);
@@ -37,12 +34,14 @@ function choose(status,line){
         }
     }
 }
-function drawbegin(shap,orignalX, orignalY){
+function drawbegin(shap,color,size,global,orignalX, orignalY){
+    context.strokeStyle = color;
+    context.lineWidth= size;
+    context.globalAlpha= global;
     data = context.getImageData(0, 0, width, height);
     context.moveTo(orignalX, orignalY);
 }
 function drawmove(shap,lastX,lastY){
-    console.log(lastX+","+lastY);
     context.lineTo(lastX, lastY); //根据鼠标路径绘画
     context.stroke(); //立即渲染
 }
@@ -50,7 +49,6 @@ function drawmove(shap,lastX,lastY){
 function drawend(shap,lastX,lastY){
     context.clearRect(0, 0, width, height);
     context.putImageData(data, 0, 0);
-    console.log(lastX+","+lastY);
     context.lineTo(lastX, lastY); //根据鼠标路径绘画
     context.stroke(); //立即渲染
 

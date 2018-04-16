@@ -20,6 +20,6 @@ class Draw extends Base
     protected $scene=[
         'id'=>['id'],
         'status'=>['id','status'],
-        'add'=>['title','thumb'],
+        'add'=>['title'],
     ];
 }

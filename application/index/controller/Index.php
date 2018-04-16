@@ -29,12 +29,15 @@ class Index extends Controller
         }
     }
     public function save(){
+        dump(request()->param());exit;
         if(!session('user')||session('user')==null){
             return json(['status'=>0,'message'=>'请先登录']);
         }
         $data=validate('Draw')->goCheck('add');
+        $data=null;
         if(!is_array($data)) {
             $d=request()->param();
+//            $d['thumb']='/static/image/face.png';
             $d['content']=json_encode($d['content']);
             $d['user_id'] = session('user')['id'];
             $d['status'] = 1;
