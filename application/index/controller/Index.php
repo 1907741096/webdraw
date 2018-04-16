@@ -34,11 +34,8 @@ class Index extends Controller
             return json(['status'=>0,'message'=>'请先登录']);
         }
         $data=validate('Draw')->goCheck('add');
-        $data=null;
         if(!is_array($data)) {
             $d=request()->param();
-//            $d['thumb']='/static/image/face.png';
-            $d['content']=json_encode($d['content']);
             $d['user_id'] = session('user')['id'];
             $d['status'] = 1;
             $d['create_time'] = time();

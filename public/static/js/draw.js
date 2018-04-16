@@ -221,10 +221,24 @@ function convertBase64UrlToBlob(urlData,type){
 
 function save(){
     var postData={};
-    // postData['thumb']=myCanvas.toDataURL();
     postData['title']=document.getElementById('title').value;
-    postData['content']=postArr;
-    console.log(postData);
+    postData['content']=JSON.stringify(postArr);
+    var dataURL=myCanvas.toDataURL();
+    var blob=convertBase64UrlToBlob(dataURL,"png");
+    var formdata=new FormData();
+    formdata.append('file',blob);
+    $.ajax({
+        url : '/admin/upload/image',
+        data :  formdata,
+        processData : false,
+        contentType : false,
+        dataType: 'json',
+        type : "POST",
+        success : function(data){
+
+        }
+    });
+    console.log(formdata);return;
     $.post('/index/index/save',postData,function(result){
         if(result.status == 1) {
             //成功
