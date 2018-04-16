@@ -23,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="draw.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="draw.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/static/js/draw.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="250" column="49" lean-forward="false" selection-start-line="250" selection-start-column="49" selection-end-line="250" selection-end-column="49" />
+            <state relative-caret-position="107">
+              <caret line="235" column="37" lean-forward="true" selection-start-line="235" selection-start-column="37" selection-end-line="235" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -43,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/index/controller/Index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="55" column="9" lean-forward="false" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+            <state relative-caret-position="322">
+              <caret line="53" column="20" lean-forward="false" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -163,8 +163,8 @@
         <option value="$PROJECT_DIR$/application/common/validate/Draw.php" />
         <option value="$PROJECT_DIR$/application/admin/controller/Upload.php" />
         <option value="$PROJECT_DIR$/thinkphp/library/think/File.php" />
-        <option value="$PROJECT_DIR$/public/static/js/draw.js" />
         <option value="$PROJECT_DIR$/application/index/controller/Index.php" />
+        <option value="$PROJECT_DIR$/public/static/js/draw.js" />
       </list>
     </option>
   </component>
@@ -181,8 +181,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="582" />
-    <option name="y" value="242" />
+    <option name="x" value="547" />
+    <option name="y" value="155" />
     <option name="width" value="1265" />
     <option name="height" value="871" />
   </component>
@@ -429,12 +429,12 @@
       <workItem from="1523413104792" duration="17495000" />
       <workItem from="1523500588514" duration="9611000" />
       <workItem from="1523530729402" duration="19965000" />
-      <workItem from="1523856690983" duration="8836000" />
+      <workItem from="1523856690983" duration="9075000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="677858000" />
+    <option name="totallyTimeSpent" value="678097000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -446,7 +446,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="582" y="242" width="1265" height="871" extended-state="0" />
+    <frame x="547" y="155" width="1265" height="871" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16189697" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -832,18 +832,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/draw.js">
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="250" column="49" lean-forward="false" selection-start-line="250" selection-start-column="49" selection-end-line="250" selection-end-column="49" />
+        <state relative-caret-position="322">
+          <caret line="53" column="20" lean-forward="false" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Index.php">
+    <entry file="file://$PROJECT_DIR$/public/static/js/draw.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="55" column="9" lean-forward="false" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+        <state relative-caret-position="107">
+          <caret line="235" column="37" lean-forward="true" selection-start-line="235" selection-start-column="37" selection-end-line="235" selection-end-column="37" />
           <folding />
         </state>
       </provider>

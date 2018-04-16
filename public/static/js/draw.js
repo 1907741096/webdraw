@@ -234,7 +234,7 @@ function save(){
             dataType: 'json',
             type : "POST",
             success : function(data){
-                if(result.status==1){
+                if(data.status==1){
                     postData['title']=document.getElementById('title').value;
                     postData['content']=JSON.stringify(postArr);
                     postData['thumb']=data.thumb;
