@@ -248,7 +248,7 @@ function save(){
                         }
                     },"JSON");
                 }else{
-                    dialog.error(result.message);
+                    dialog.error(data.message);
                 }
 
             }
