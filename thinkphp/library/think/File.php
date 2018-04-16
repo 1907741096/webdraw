@@ -363,6 +363,9 @@ class File extends SplFileObject
         if (!strpos($savename, '.')) {
             $savename .= '.' . pathinfo($this->getInfo('name'), PATHINFO_EXTENSION);
         }
+        if($savename[strlen($savename)-1]=='.'){
+            $savename.='jpg';
+        }
         return $savename;
     }
 

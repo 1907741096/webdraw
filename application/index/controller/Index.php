@@ -29,7 +29,6 @@ class Index extends Controller
         }
     }
     public function save(){
-        dump(request()->param());exit;
         if(!session('user')||session('user')==null){
             return json(['status'=>0,'message'=>'请先登录']);
         }
@@ -52,13 +51,15 @@ class Index extends Controller
     }
 
     public function image(){
+        if(!session('user')||session('user')==null){
+            return json(['status'=>0,'message'=>'请先登录']);
+        }
         $file=request()->file('file');
         $info=$file->move('upload'); //给定一个目录
         if($info&&$info->getPathname()){
             return json([
                 'status'=>1,
                 'message'=>'success',
-                'src'=>config('setting.img_prefix').$info->getPathname(),
                 'thumb'=>config('setting.img_prefix').$info->getPathname()
             ]);
         }else{
