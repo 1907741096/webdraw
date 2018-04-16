@@ -87,4 +87,17 @@ class News extends Controller
         }
         return json($data);
     }
+    public function status(){
+        $data=validate('News')->goCheck('status');
+        if(!is_array($data)){
+            $news=model('News')->isUpdate(true)->save(request()->param());
+            if($news){
+                return json(['status'=>1,'message'=>'操作成功']);
+            }else{
+                return json(['status'=>0,'message'=>'操作失败']);
+            }
+        }else{
+            return json($data);
+        }
+    }
 }

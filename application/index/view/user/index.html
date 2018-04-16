@@ -59,9 +59,12 @@
             {/if}
             <li>
                 <span class="am-u-sm-4 am-u-md-2 timeline-span">{$data.update_time|substr=###,5}</span>
-                <span class="am-u-sm-8 am-u-md-6"><a href="/index/news/index?id={$data.id}">{$data.title}</a></span>
+                <span class="am-u-sm-8 am-u-md-6"><a href="/index/{$type}/detail?id={$data.id}">{$data.title}</a></span>
                 <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">{$data.user.name}</span>
-                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only"><a id="delete" class="active" style="cursor: pointer" attr-id="{$data.id}">删除</a></span>
+                <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">
+                    {if condition="$type eq 'draw'"}<a href="__INDEX__/{$type}/edit?id={$data.id}">继续画图</a>{/if}
+                    <span id="status" attr-id="{$data.id}" attr-status="{$data.status}" style="cursor: pointer">{$data.status|getCommonStatus2}</span>
+                </span>
             </li>
                 {if condition="$k eq $count"}
                 </ul>
@@ -83,8 +86,8 @@
 <script src="__STATIC__/js/login.js"></script>
 <script>
     var SCOPE = {
-        'status_url': '__ADMIN__/news/status',
-        'delete_url': '__ADMIN__/news/status',
+        'status_url': '__INDEX__/{$type}/status',
+        'delete_url': '__INDEX__/{$type}/status',
         'save_url': '__INDEX__/user/save',
         'jump_url': '__INDEX__/user'
     }

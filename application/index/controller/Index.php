@@ -36,7 +36,7 @@ class Index extends Controller
         if(!is_array($data)) {
             $d=request()->param();
             $d['user_id'] = session('user')['id'];
-            $d['status'] = 1;
+            $d['status'] = 0;
             $d['create_time'] = time();
             $d['update_time'] = $d['create_time'];
             $id = model('Draw')->create($d);
@@ -60,7 +60,8 @@ class Index extends Controller
             return json([
                 'status'=>1,
                 'message'=>'success',
-                'thumb'=>config('setting.img_prefix').$info->getPathname()
+                'thumb'=>config('setting.img_prefix').$info->getPathname(),
+                'src'=>config('setting.img_prefix').$info->getPathname()
             ]);
         }else{
             return json([

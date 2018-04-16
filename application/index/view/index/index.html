@@ -20,12 +20,12 @@
     </select>
     <input id="color" type="color"/>
 
-    <input type="text" id="title" value="">
-    <input type="button" value="保存" onclick="save()">
     <input id="file_upload_img" type="file" multiple="true">
 
-    <form id="form-upload"></form>
-    <canvas id="myCanvas" style="border:1px solid #ddd;"></canvas>
+    <canvas id="myCanvas" style="border:1px solid #ddd;box-shadow: 0px 5px 20px rgba(0,0,0,0.1)"></canvas>
+
+    <input type="text" id="title" value="" placeholder="请填写绘画标题" style="width: 100%;height: 40px;margin-top: 10px;">
+    <input type="button" value="保存绘画过程" onclick="save()" style="width: 160px;height: 30px;line-height:26px; background-color: #333;color: #fff;margin-top: 10px;">
 </div>
 {include file="common/footer"}
 <script src="__STATIC__/uploadify/jquery.uploadify.js"></script>

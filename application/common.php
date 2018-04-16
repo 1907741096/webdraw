@@ -20,6 +20,16 @@
         }
         return $message;
     }
+function getCommonStatus2($status){
+    if($status==1){
+        $message="<text style='color:mediumseagreen'>显示</text>";
+    }elseif($status==0){
+        $message="<text style='color:#999'>隐藏</text>";
+    }else{
+        $message="<text style='color:red'>已删除</text>";
+    }
+    return $message;
+}
     function getPower($power){
         if($power==1){
             return '总管理员';

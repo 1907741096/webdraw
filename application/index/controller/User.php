@@ -13,7 +13,7 @@ class User extends Common
 {
 
     public function index($type='news'){
-        $data['status']=self::$status;
+        $data['status']=['neq',-1];
         $data['user_id']=session('user')['id'];
         if(input('title')){
             $data['title']=array('like','%'.input('title').'%');

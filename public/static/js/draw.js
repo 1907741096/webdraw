@@ -47,7 +47,6 @@ function globalChange(){
 }
 
 function shapeChange() {
-    context.strokeStyle = "black";
     var myselect = document.getElementById("shape");
     var index = myselect.selectedIndex;
     var myvalue = myselect.options[index].value;
@@ -223,37 +222,35 @@ function save(){
     var postData={};
     var dataURL=myCanvas.toDataURL();
     var blob=convertBase64UrlToBlob(dataURL,"jpg");
-    // myCanvas.toBlob(function(blob){
-        var formdata=new FormData();
-        formdata.append('file',blob);
-        $.ajax({
-            url : '/index/index/image',
-            data :  formdata,
-            processData : false,
-            contentType : false,
-            dataType: 'json',
-            type : "POST",
-            success : function(data){
-                if(data.status==1){
-                    postData['title']=document.getElementById('title').value;
-                    postData['content']=JSON.stringify(postArr);
-                    postData['thumb']=data.thumb;
-                    $.post('/index/index/save',postData,function(result){
-                        if(result.status == 1) {
-                            //成功
-                            dialog.success(result.message,'/index/draw');
-                        }else if(result.status == 0) {
-                            // 失败
-                            dialog.error(result.message);
-                        }
-                    },"JSON");
-                }else{
-                    dialog.error(data.message);
-                }
-
+    var formdata=new FormData();
+    formdata.append('file',blob);
+    $.ajax({
+        url : '/index/index/image',
+        data :  formdata,
+        processData : false,
+        contentType : false,
+        dataType: 'json',
+        type : "POST",
+        success : function(data){
+            if(data.status==1){
+                postData['title']=document.getElementById('title').value;
+                postData['content']=JSON.stringify(postArr);
+                postData['thumb']=data.thumb;
+                $.post('/index/index/save',postData,function(result){
+                    if(result.status == 1) {
+                        //成功
+                        dialog.success(result.message,'/index/draw');
+                    }else if(result.status == 0) {
+                        // 失败
+                        dialog.error(result.message);
+                    }
+                },"JSON");
+            }else{
+                dialog.error(data.message);
             }
-        });
-    // },"image/jpeg",0.6)
+
+        }
+    });
 }
 
 $('#file_upload_img').uploadify({
