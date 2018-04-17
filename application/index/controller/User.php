@@ -22,10 +22,10 @@ class User extends Common
         $user=model('user')->find($data['user_id']);
         $this->assign('user',$user);
         if($type=='news'){
-            $datas=model('news')->where($data)->select();
+            $datas=model('news')->where($data)->order('id desc')->select();
             $count=model('news')->where($data)->count();
         }else{
-            $datas=model('draw')->where($data)->select();
+            $datas=model('draw')->where($data)->order('id desc')->select();
             $count=model('draw')->where($data)->count();
         }
         $this->assign('type',$type);

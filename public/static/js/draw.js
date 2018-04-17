@@ -82,6 +82,15 @@ function back() {
  鼠标按下
  */
 function myCanvasMouseDown(event) {
+    isMouseDown = true;
+    if(shap==3){
+        lastX = event.offsetX;
+        lastY = event.offsetY;
+        var colorData = document.getElementById("myCanvas").getPixelColor(lastX, lastY);
+        console.log(colorData);
+        // 获取该点像素的数据
+        return;
+    }
     //event.preventDefault();
         data = context.getImageData(0, 0, width, height);
         orignalX = event.offsetX;
@@ -99,7 +108,7 @@ function myCanvasMouseDown(event) {
         postArr[length]['size']=context.lineWidth;
         postArr[length]['global']=context.globalAlpha;
         restore.push(data);
-        isMouseDown = true;
+
 }
 
 /**
@@ -140,6 +149,13 @@ function myCanvasMouseMove(event) {
                 context.lineTo(lastX, lastY); //根据鼠标路径绘画
                 context.stroke(); //立即渲染
                 break;
+            case 3:
+                lastX = event.offsetX;
+                lastY = event.offsetY;
+                var colorData = document.getElementById("myCanvas").getPixelColor(lastX, lastY);
+                console.log(colorData);
+                // 获取该点像素的数据
+                break;
 
         }
     }
@@ -173,7 +189,10 @@ function myCanvasMouseUp(event) {
             case 2:
                 context.lineTo(lastX, lastY); //根据鼠标路径绘画
                 context.stroke(); //立即渲染
-
+                break;
+            case 3:
+                isMouseDown = false;
+                return;
                 break;
         }
         postArr[length]['line'].push([lastX,lastY]);

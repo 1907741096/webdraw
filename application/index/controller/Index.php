@@ -36,7 +36,7 @@ class Index extends Controller
         if(!is_array($data)) {
             $d=request()->param();
             $d['user_id'] = session('user')['id'];
-            $d['status'] = 0;
+            $d['status'] = 1;
             $d['create_time'] = time();
             $d['update_time'] = $d['create_time'];
             $id = model('Draw')->create($d);
@@ -69,5 +69,13 @@ class Index extends Controller
                 'message'=>'error',
             ]);
         }
+    }
+    public function draw(){
+        $id=input('id');
+        $this->assign('id',$id);
+        $this->assign('menu','index');
+        $this->assign('title',input('title'));
+        $this->assign('menu','index');
+        return $this->fetch();
     }
 }

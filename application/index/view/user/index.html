@@ -2,17 +2,30 @@
 <body>
 {include file="common/top"}
 <!-- content srart -->
+<style>
+    #upload_face-button{
 
+    }
+    #SWFUpload_0{
+        margin-left:-25px;
+        margin-top: -8rem;
+        width: 8rem;
+        height: 8rem;
+        border: none;
+        border-radius: 50%;
+    }
+</style>
 <div class="am-g am-g-fixed blog-fixed blog-content">
     <div class="am-u-sm-12">
         <h1 class="blog-text-center">-- 个人中心 --</h1>
         <div class="am-g blog-author blog-article-margin">
             <form class="am-form am-g" id="form">
                 <fieldset>
-                    <div class="am-u-sm-3 am-u-md-3 am-u-lg-2" style="text-align: center;">
-                        <img src="{$user.face}" alt="" class="blog-author-img am-circle">
+                    <div class="am-u-sm-3 am-u-md-3 am-u-lg-2" style="text-align: center;" title="上传头像">
+                        <img src="{$user.face}" alt="" class="blog-author-img am-circle" id="upload_org_code_img">
+                        <input id="upload_face" type="file" multiple="true">
+                        <input id="file_upload_image" name="face" type="hidden" multiple="true" value="{$user.face}">
                     </div>
-                    <a><div class="loginout">退出登录</div></a>
                     <div class="am-u-sm-9 am-u-md-9 am-u-lg-10">
                         <div class="am-form-group am-u-sm-4 blog-clear-left">
                             <input type="text" class="" placeholder="名字" value="{$user.name}" name="name">
@@ -21,6 +34,7 @@
                     <div class="am-u-sm-9 am-u-md-9 am-u-lg-10">
                         <div class="am-form-group am-u-sm-4 blog-clear-left">
                             <input type="button" class="am-btn am-btn-default" value="保存信息" id="submit">
+                            <input type="button" class="am-btn am-btn-default loginout" value="退出登录">
                         </div>
                     </div>
                 </fieldset>
@@ -62,7 +76,7 @@
                 <span class="am-u-sm-8 am-u-md-6"><a href="/index/{$type}/detail?id={$data.id}">{$data.title}</a></span>
                 <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">{$data.user.name}</span>
                 <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">
-                    {if condition="$type eq 'draw'"}<a href="__INDEX__/{$type}/edit?id={$data.id}">继续画图</a>{/if}
+                    {if condition="$type eq 'draw'"}<a href="__INDEX__/index/draw?id={$data.id}">继续画图</a>{/if}
                     <span id="status" attr-id="{$data.id}" attr-status="{$data.status}" style="cursor: pointer">{$data.status|getCommonStatus2}</span>
                 </span>
             </li>
@@ -84,12 +98,37 @@
 <!-- content end -->
 {include file="common/footer"}
 <script src="__STATIC__/js/login.js"></script>
+<script src="__STATIC__/uploadify/jquery.uploadify.js"></script>
+<script src="__STATIC__/js/image.js"></script>
 <script>
     var SCOPE = {
         'status_url': '__INDEX__/{$type}/status',
         'delete_url': '__INDEX__/{$type}/status',
         'save_url': '__INDEX__/user/save',
-        'jump_url': '__INDEX__/user'
+        'jump_url': '__INDEX__/user',
+        'ajax_upload_image_url': '/index/index/image',
+        'ajax_upload_swf': '__STATIC__/uploadify/uploadify.swf'
     }
+    $(function() {
+        $('#upload_face').uploadify({
+            'swf'      : SCOPE.ajax_upload_swf,
+            'uploader' : SCOPE.ajax_upload_image_url,
+            'buttonText': '',
+            'fileTypeDesc': 'Image Files',
+            'fileObjName' : 'file',
+            //允许上传的文件后缀
+            'fileTypeExts': '*.gif; *.jpg; *.png',
+            'onUploadSuccess' : function(file,data,response) {
+                // response true ,false
+                if(response) {
+                    var obj = JSON.parse(data); //由JSON字符串转换为JSON对象
+                    $("#upload_org_code_img").attr("src",obj.src);
+                    $("#file_upload_image").attr('value',obj.thumb);
+                }else{
+                    alert('上传失败');
+                }
+            },
+        });
+    });
 </script>
 </body>

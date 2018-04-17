@@ -502,11 +502,6 @@ h1 span{
     color: #10D07A;
 }
 
-.loginout{
-    position: absolute;
-    right:50px;
-    cursor: pointer;
-}
 .loginout .active{
     color: #10D07A;
 }
@@ -518,4 +513,18 @@ h1 span{
     text-align: center;
     color: #10D07A;
     font-size: 15px;
+}
+.draw-top{
+    float: left;
+    height: 90px;
+    line-height: 80px;
+}
+.sdkz{
+    margin-left: 20px;
+}
+#jia{
+    cursor: pointer;
+}
+#jian{
+    cursor: pointer;
 }

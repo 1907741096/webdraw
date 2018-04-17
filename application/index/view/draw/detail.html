@@ -2,11 +2,24 @@
 <body>
 {include file="common/top"}
 <div class="am-g am-g-fixed blog-fixed">
-    <input type="button" value="演示" onclick="show()">
-    <div class="sdkz">
-        <span id="jian"> - </span>
-        <span id="sd"> 1.0 </span>
-        <span id="jia"> + </span>
+    <div class="draw-top">
+        <a href="__INDEX__/index/draw?id={$draw.id}"><input type="button" value="继续作画" class="am-btn am-btn-default"></a>
+    </div>
+    <div class="draw-top" style="margin-left: 80px;">
+        <input type="button" value="点击演示" onclick="show()" class="am-btn am-btn-default">
+    </div>
+    <div class="draw-top" style="margin-left: 80px;">
+        <input type="button" value="选择速度" class="am-btn am-btn-default">
+    </div>
+    <div class="draw-top">
+        <div class="sdkz">
+            <span id="jian"> - </span>
+            <span id="sd"> 1.0 </span>
+            <span id="jia"> + </span>
+        </div>
+    </div>
+    <div class="draw-top" style="float: right;">
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=551337680&auto=0&height=66"></iframe>
     </div>
     <canvas id="myCanvas" style="border:1px solid #ddd;"></canvas>
 </div>
@@ -16,7 +29,7 @@
     var postData={};
     postData['id']={$draw.id};
     $.post('/index/draw/info',postData,function(result){
-        arr=result;
+        arr=result.content;
     },"JSON");
 </script>
 <script language="JavaScript" src="__STATIC__/js/show.js"></script>

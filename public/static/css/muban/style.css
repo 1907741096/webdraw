@@ -64,7 +64,7 @@ section:last-child {
 	overflow:hidden;
 }
 /*- Reset bootstrap -*/
-@media (min-width: 1200px)
+@media (min-width: 1200px){}
 .container {
 	width: 1260px;
 }

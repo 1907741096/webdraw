@@ -15,7 +15,6 @@
     <input type="button" id="eraser" value="橡皮" onclick="doEraser()">
     <select id="shape" onchange="shapeChange()">
         <option value="2">画笔</option>
-        <option value="3">取色器</option>
         <option value="1">矩形</option>
         <option value="0">圆形</option>
     </select>
@@ -30,6 +29,17 @@
 </div>
 {include file="common/footer"}
 <script src="__STATIC__/uploadify/jquery.uploadify.js"></script>
-<script src="__STATIC__/js/getColor.js"></script>
 <script language="JavaScript" src="__STATIC__/js/draw.js"></script>
+<script>
+    var postData={};
+    postData['id']={$id};
+    $.post('/index/draw/info',postData,function(result){
+        postArr=result.content;
+        var img = new Image();
+        img.src = result.thumb;
+        img.onload=function(){
+            context.drawImage(img,0,0,width,height);
+        }
+    },"JSON");
+</script>
 </body>

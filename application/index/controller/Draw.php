@@ -44,8 +44,8 @@ class Draw extends Controller
         $id=input('id');
         $data['id']=$id;
         $draw=model('draw')->find($data);
-        $content=json_decode($draw['content']);
-        return json($content);
+        $draw['content']=json_decode($draw['content']);
+        return json($draw);
     }
     public function status(){
         $data=validate('Draw')->goCheck('status');
