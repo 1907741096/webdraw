@@ -14,7 +14,18 @@ var n=10;
 
 var data;
 
+var sd=10;
+$('#jia').click(function(){
+    sd<50?sd++:sd;
+    $('#sd').html(sd/10);
+});
+$('#jian').click(function(){
+    sd>1?sd--:sd;
+    $('#sd').html(sd/10);
+});
+
 function show(){
+    n/=sd/10;
    for(var i in arr){
        choose(arr[i].status,arr[i].color,arr[i].size,arr[i].global,arr[i].line);
    }
