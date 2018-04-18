@@ -1,25 +1,38 @@
 {include file="common/head"}
 <body>
+<style type="text/css">
+    * { margin:0; padding:0; }
+    .box { z-index: 10; position:fixed; top:20px; left:20px; min-width:200px; min-height:200px; border:1px solid #ccc; background:#fff; border-radius: 6px;}
+    .box .title { background:#eee; height:30px; min-width:200px; cursor:move; }
+    .box .close {display:block; width:18px; height:18px; line-height:20px; text-align:center; cursor:pointer; position:absolute; right:5px; top:3px; font-weight:bold; }
+    .con { padding:20px; }
+    .bg_change_size { background:url('/static/image/size.png') no-repeat; }
+    body { height:3000px; background:#f7f6f5; }
+</style>
 {include file="common/top"}
 <div class="am-g am-g-fixed blog-fixed">
     <!-- <input type="button" id="open" value="open"></input>
     <input type="button" id= "save" value = "save"></input>
     <input type="button" id= "color" value="color"></input>  -->
-
-    <input type="button" value="粗细">
-    <input type="number" id="size" onchange="sizeChange()" min="1" max="100" value="1">
-    <input type="button" value="透明度">
-    <input type="number" id="global" onchange="globalChange()" min="1" max="100" value="100">
-    <input type="button" id="clear" value="清空" onclick="clearCanvas()">
-    <input type="button" value="撤销" onclick="back()">
-    <input type="button" id="eraser" value="橡皮" onclick="doEraser()">
-    <select id="shape" onchange="shapeChange()">
-        <option value="2">画笔</option>
-        <option value="3">取色器</option>
-        <option value="1">矩形</option>
-        <option value="0">圆形</option>
-    </select>
-    <input id="color" type="color"/>
+    <div class="box">
+        <div class="title">&nbsp;<span class="close"><img src="/static/image/close.png" width="18" height="18"></span></div>
+        <div class="con">
+            <input type="button" value="粗细">
+            <input type="number" id="size" onchange="sizeChange()" min="1" max="100" value="1">
+            <input type="button" value="透明度">
+            <input type="number" id="global" onchange="globalChange()" min="1" max="100" value="100">
+            <input type="button" id="clear" value="清空" onclick="clearCanvas()">
+            <input type="button" value="撤销" onclick="back()">
+            <input type="button" id="eraser" value="橡皮" onclick="doEraser()">
+            <select id="shape" onchange="shapeChange()">
+                <option value="2">画笔</option>
+                <option value="3">取色器</option>
+                <option value="1">矩形</option>
+                <option value="0">圆形</option>
+            </select>
+            <input id="color" type="color"/>
+        </div>
+    </div>
 
     <input id="file_upload_img" type="file" multiple="true">
 
@@ -32,4 +45,14 @@
 <script src="__STATIC__/uploadify/jquery.uploadify.js"></script>
 <script src="__STATIC__/js/getColor.js"></script>
 <script language="JavaScript" src="__STATIC__/js/draw.js"></script>
+<script language="JavaScript" src="__STATIC__/js/move.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".box").bg_move({
+            move:'.title',
+            closed:'.close',
+            size : 6
+        });
+    });
+</script>
 </body>
