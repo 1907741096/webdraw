@@ -1,9 +1,14 @@
-var shap = 2; //0 is circle; 1 is rectangle
-var orignalX, orignalY;//the coordinate of mouse down
-var lastX, lastY;//the coordinate of last mouse position
-var isMouseDown = false; // flag of mouse pressing down
+var shap = 2; 
+var orignalX, orignalY;
+var lastX, lastY;
+var isMouseDown = false; 
+var colorMouse = false;
 var myCanvas = document.getElementById("myCanvas");
 var context = myCanvas.getContext('2d');
+
+var colorpanCanvas = document.getElementById("colorpan");
+var colorpan = colorpanCanvas.getContext('2d');
+
 var width = screen.width, height =screen.height;
 if(width>1200) width=1200;
 if(height>800) height=800;
@@ -18,9 +23,14 @@ context.strokeStyle = "black";
 context.strokeWidth = 1;
 context.lineWidth = 1;
 
+colorpan.strokeStyle = "black";
+colorpan.strokeWidth = 1;
+colorpan.lineWidth = 1;
+
 
 document.getElementById('color').onchange = function () {
-    context.strokeStyle = this.value
+    context.strokeStyle = this.value;
+    colorpan.strokeStyle = this.value;
 };
 
 /**
@@ -28,6 +38,7 @@ document.getElementById('color').onchange = function () {
  */
 function doEraser() {
     context.strokeStyle = "white";
+    colorpan.strokeStyle = "white";
     shap = 2;
 }
 
@@ -36,7 +47,7 @@ function doEraser() {
  */
 function sizeChange() {
     context.lineWidth = parseInt(document.getElementById('size').value);
-
+    colorpan.lineWidth = parseInt(document.getElementById('size').value);
 }
 
 /**
@@ -44,6 +55,7 @@ function sizeChange() {
  */
 function globalChange(){
     context.globalAlpha=parseInt(document.getElementById('global').value)/100;
+    colorpan.globalAlpha=parseInt(document.getElementById('global').value)/100;
 }
 
 function shapeChange() {
@@ -87,7 +99,8 @@ function myCanvasMouseDown(event) {
         lastX = event.offsetX;
         lastY = event.offsetY;
         var colorData = document.getElementById("myCanvas").getPixelColor(lastX, lastY);
-        console.log(colorData);
+        document.getElementById('color').value = colorData.hex;
+        context.strokeStyle=colorData.hex;
         // 获取该点像素的数据
         return;
     }
@@ -153,7 +166,8 @@ function myCanvasMouseMove(event) {
                 lastX = event.offsetX;
                 lastY = event.offsetY;
                 var colorData = document.getElementById("myCanvas").getPixelColor(lastX, lastY);
-                console.log(colorData);
+                document.getElementById('color').value = colorData.hex;
+                context.strokeStyle=colorData.hex;
                 // 获取该点像素的数据
                 break;
 
@@ -161,9 +175,16 @@ function myCanvasMouseMove(event) {
     }
 }
 
+/**
+ 鼠标抬起
+ */
 function myCanvasMouseUp(event) {
     if (isMouseDown) {
         //event.preventDefault();
+        if(shap==3){
+            isMouseDown=false;
+            return;
+        }
 
         context.clearRect(0, 0, width, height);
         context.putImageData(data, 0, 0);
@@ -190,10 +211,6 @@ function myCanvasMouseUp(event) {
                 context.lineTo(lastX, lastY); //根据鼠标路径绘画
                 context.stroke(); //立即渲染
                 break;
-            case 3:
-                isMouseDown = false;
-                return;
-                break;
         }
         postArr[length]['line'].push([lastX,lastY]);
         length++;
@@ -209,13 +226,130 @@ function myCanvasMouseUp(event) {
         context.closePath();
     }
 }
+
+function colorpanMouseDown(event) {
+    colorMouse = true;
+    if(shap==3){
+        lastX = event.offsetX;
+        lastY = event.offsetY;
+        var colorData = document.getElementById("colorpan").getPixelColor(lastX, lastY);
+        document.getElementById('color').value = colorData.hex;
+        colorpan.strokeStyle=colorData.hex;
+        // 获取该点像素的数据
+        return;
+    }
+    //event.preventDefault();
+        data = colorpan.getImageData(0, 0, width, height);
+        orignalX = event.offsetX;
+        orignalY = event.offsetY;
+        if(orignalX==null){
+            orignalX = event.targetTouches[0].pageX;
+            orignalY = event.targetTouches[0].pageY-140;
+        }
+        colorpan.moveTo(orignalX, orignalY);
+
+}
+function colorpanMouseMove(event) {
+    if (colorMouse) {
+        //event.preventDefault();
+
+        switch (shap) {
+            case 0:
+                colorpan.clearRect(0, 0, width, height);
+                colorpan.putImageData(data, 0, 0);
+                lastX = event.offsetX;
+                lastY = event.offsetY;
+                colorpan.beginPath();
+                colorpan.arc(orignalX + (lastX - orignalX) / 2, orignalY + (lastY - orignalY) / 2, Math.abs(lastX - orignalX) / 2, 0, Math.PI * 2, true);
+                colorpan.stroke();
+                colorpan.closePath();
+                break;
+            case 1:
+                colorpan.clearRect(0, 0, width, height);
+                colorpan.putImageData(data, 0, 0);
+                lastX = event.offsetX;
+                lastY = event.offsetY;
+                colorpan.strokeRect(orignalX, orignalY, lastX - orignalX, lastY - orignalY);
+                break;
+            case 2:
+                lastX = event.offsetX;
+                lastY = event.offsetY;
+                if(lastX==null){
+                    lastX = event.targetTouches[0].pageX;
+                    lastY = event.targetTouches[0].pageY-140;
+                }
+                colorpan.lineTo(lastX, lastY); //根据鼠标路径绘画
+                colorpan.stroke(); //立即渲染
+                break;
+            case 3:
+                lastX = event.offsetX;
+                lastY = event.offsetY;
+                var colorData = document.getElementById("colorpan").getPixelColor(lastX, lastY);
+                document.getElementById('color').value = colorData.hex;
+                colorpan.strokeStyle=colorData.hex;
+                // 获取该点像素的数据
+                break;
+
+        }
+    }
+}
+function colorpanMouseUp(event) {
+    if (colorMouse) {
+        //event.preventDefault();
+        if(shap==3){
+            colorMouse=false;
+            return;
+        }
+
+        colorpan.clearRect(0, 0, width, height);
+        colorpan.putImageData(data, 0, 0);
+
+        lastX = event.offsetX;
+        lastY = event.offsetY;
+        if(lastX==null){
+            lastX = event.changedTouches[0].clientX;
+            lastY = event.changedTouches[0].clientY-140;
+        }
+        switch (shap) {
+            case 0:
+            colorpan.beginPath();
+            colorpan.arc(orignalX + (lastX - orignalX) / 2, orignalY + (lastY - orignalY) / 2, Math.abs(lastX - orignalX) / 2, 0, Math.PI * 2, true);
+            colorpan.stroke();
+            colorpan.closePath();
+                break;
+            case 1:
+            colorpan.beginPath();
+            colorpan.strokeRect(orignalX, orignalY, lastX - orignalX, lastY - orignalY);
+            colorpan.closePath();
+                break;
+            case 2:
+            colorpan.lineTo(lastX, lastY); //根据鼠标路径绘画
+            colorpan.stroke(); //立即渲染
+                break;
+        }
+        colorMouse = false;
+        lastX = null;
+        lastY = null;
+        orignalX = null;
+        orignalY = null;
+        data = colorpan.getImageData(0, 0, width, height);
+        colorpan.beginPath();
+        colorpan.clearRect(0, 0, width, height);
+        colorpan.putImageData(data, 0, 0);
+        colorpan.closePath();
+    }
+}
+
 myCanvas.addEventListener("mousedown", myCanvasMouseDown, false);
 myCanvas.addEventListener("mousemove", myCanvasMouseMove, false);
 myCanvas.addEventListener("mouseup", myCanvasMouseUp, false);
 
-myCanvas.addEventListener("touchstart", myCanvasMouseDown, false);
-myCanvas.addEventListener("touchmove", myCanvasMouseMove, false);
-myCanvas.addEventListener("touchend", myCanvasMouseUp, false);
+colorpanCanvas.addEventListener("mousedown", colorpanMouseDown, false);
+colorpanCanvas.addEventListener("mousemove", colorpanMouseMove, false);
+colorpanCanvas.addEventListener("mouseup", colorpanMouseUp, false);
+// myCanvas.addEventListener("touchstart", myCanvasMouseDown, false);
+// myCanvas.addEventListener("touchmove", myCanvasMouseMove, false);
+// myCanvas.addEventListener("touchend", myCanvasMouseUp, false);
 
 
 function openImage(thumb){

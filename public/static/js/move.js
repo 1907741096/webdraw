@@ -66,7 +66,7 @@
                 }
             });
             t.move();
-            t.size();
+            // t.size();
         },
         move:function(){
             var t = this;

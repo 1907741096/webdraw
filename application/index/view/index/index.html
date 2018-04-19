@@ -1,43 +1,64 @@
 {include file="common/head"}
 <body>
 <style type="text/css">
-    * { margin:0; padding:0; }
-    .box { z-index: 10; position:fixed; top:20px; left:20px; min-width:200px; min-height:200px; border:1px solid #ccc; background:#fff; border-radius: 6px;}
-    .box .title { background:#eee; height:30px; min-width:200px; cursor:move; }
+    * { margin:0; padding:0; outline: none;}
+    .box { z-index: 10; position:fixed; top:20px; left:20px; width:400px; height:300px; border:1px solid #ccc; background:#fff; border-radius: 6px;}
+    .box .title { background:#eee; height:30px; width:400px; cursor:move; }
+    .box .title span{margin-left: 10px;}
     .box .close {display:block; width:18px; height:18px; line-height:20px; text-align:center; cursor:pointer; position:absolute; right:5px; top:3px; font-weight:bold; }
-    .con { padding:20px; }
     .bg_change_size { background:url('/static/image/size.png') no-repeat; }
-    body { height:3000px; background:#f7f6f5; }
+    .box-left{ width: 50%;height: 268px;float: left; padding: 20px; }
+    .box-left-li{ width:100%;height: 45px;border-bottom: 1px solid #eee;line-height: 45px;text-align: center;}
+    .box-left-li input{border: none;font-size: 14px;text-align: center;}
+    .box-left-li span{font-size: 14px;cursor: pointer;}
+    .box-right{ width: 50%;height: 268px;float: right; padding: 20px; }
+    .box-right-top{width: 100%;height: 50px;line-height: 50px;text-align: center;}
+    .box-right-bottom{width: 100%;height: 160px;line-height: 50px;text-align: center;border: 1px solid #ddd;border-radius: 50%;}
 </style>
 {include file="common/top"}
 <div class="am-g am-g-fixed blog-fixed">
-    <!-- <input type="button" id="open" value="open"></input>
-    <input type="button" id= "save" value = "save"></input>
-    <input type="button" id= "color" value="color"></input>  -->
     <div class="box">
-        <div class="title">&nbsp;<span class="close"><img src="/static/image/close.png" width="18" height="18"></span></div>
-        <div class="con">
-            <input type="button" value="粗细">
-            <input type="number" id="size" onchange="sizeChange()" min="1" max="100" value="1">
-            <input type="button" value="透明度">
-            <input type="number" id="global" onchange="globalChange()" min="1" max="100" value="100">
-            <input type="button" id="clear" value="清空" onclick="clearCanvas()">
-            <input type="button" value="撤销" onclick="back()">
-            <input type="button" id="eraser" value="橡皮" onclick="doEraser()">
-            <select id="shape" onchange="shapeChange()">
-                <option value="2">画笔</option>
-                <option value="3">取色器</option>
-                <option value="1">矩形</option>
-                <option value="0">圆形</option>
-            </select>
-            <input id="color" type="color"/>
-            <input type="text" style="width: 180px;" class="jscolor layui-input" value="ffffff" name="bgcolor" placeholder="请输入背景颜色" >
+        <div class="title"><span>工具栏</span>&nbsp;<span class="close"><img src="/static/image/close.png" width="18" height="18"></span></div>
+        <div>
+            <div class="box-left">
+                <div class="box-left-li">
+                    <input type="button" value="粗细值">
+                    <input type="number" id="size" onchange="sizeChange()" min="1" max="100" value="1">
+                </div>
+                <div class="box-left-li">
+                    <input type="button" value="透明度">
+                    <input type="number" id="global" onchange="globalChange()" min="1" max="100" value="100">
+                </div>
+                <div class="box-left-li">
+                    <span id="clear" onclick="clearCanvas()">清空</span>
+                    <span onclick="back()">撤销</span>
+                    <span id="eraser" onclick="doEraser()">橡皮</span>
+                </div>
+                <div class="box-left-li">
+                    <input type="button" value="颜色 ">
+                    <input id="color" type="color"/>
+                </div>
+                <div class="box-left-li" style="border:none;font-size:14px;">
+                    <select id="shape" onchange="shapeChange()">
+                        <option value="2">画笔</option>
+                        <option value="3">取色器</option>
+                        <option value="1">矩形</option>
+                        <option value="0">圆形</option>
+                    </select>
+                </div>
+            </div>
+            <div class="box-right">
+                <div class="box-right-top">调色盘</div>
+                <div class="box-right-bottom">
+                    <canvas id="colorpan" width="160" height="160" style="border-radius:50%;"></canvas>
+                </div>
+            </div>
         </div>
     </div>
+
+    <canvas id="myCanvas" style="border:1px solid #ddd;box-shadow: 0px 5px 20px rgba(0,0,0,0.2);margin-bottom:20px;background:#fff;"></canvas>
+
     <input id="file_upload_img" type="file" multiple="true">
-
-    <canvas id="myCanvas" style="border:1px solid #ddd;box-shadow: 0px 5px 20px rgba(0,0,0,0.2)"></canvas>
-
     <input type="text" id="title" value="" placeholder="请填写绘画标题" style="width: 100%;height: 40px;margin-top: 10px;font-size: 15px;padding: 10px;">
     <input type="button" value="保存绘画过程" onclick="save()" style="width: 160px;height: 30px;line-height:26px; background-color: #333;color: #fff;margin-top: 10px;font-size: 14px;">
 </div>

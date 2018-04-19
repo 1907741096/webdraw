@@ -32,12 +32,16 @@ class Draw extends Controller
         if(is_array($msg)){
             return $this->puterror($msg['message']);
         }
-        $this->assign('title',input('title'));
+        $this->assign('title',input('title'));        
         $id=input('id');
         $data['id']=$id;
         $draw=model('draw')->find($data);
         $this->assign('menu','draw');
         $this->assign('draw',$draw);
+
+        $bgms=config('bgm');
+        $this->assign('bgm',$bgms[rand(0,count($bgms)-1)]);
+
         return $this->fetch();
     }
     public function info(){
