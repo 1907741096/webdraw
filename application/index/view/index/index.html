@@ -30,9 +30,9 @@
                     <input type="number" id="global" onchange="globalChange()" min="1" max="100" value="100">
                 </div>
                 <div class="box-left-li">
-                    <span id="clear" onclick="clearCanvas()">清空</span>
-                    <span onclick="back()">撤销</span>
-                    <span id="eraser" onclick="doEraser()">橡皮</span>
+                    <span onclick="clearCanvas()">清空(C)</span>
+                    <span onclick="back()">撤销(Z)</span>
+                    <span id="eraser" onclick="doEraser()">橡皮(E)</span>
                 </div>
                 <div class="box-left-li">
                     <input type="button" value="颜色 ">
@@ -40,7 +40,7 @@
                 </div>
                 <div class="box-left-li" style="border:none;font-size:14px;">
                     <select id="shape" onchange="shapeChange()">
-                        <option value="2">画笔</option>
+                        <option value="2">画笔(B)</option>
                         <option value="3">取色器</option>
                         <option value="1">矩形</option>
                         <option value="0">圆形</option>

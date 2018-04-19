@@ -39,6 +39,9 @@ document.getElementById('color').onchange = function () {
 function doEraser() {
     context.strokeStyle = "white";
     colorpan.strokeStyle = "white";
+    document.getElementById('eraser').style.color="#10D07A";
+    // context.lineWidth = 10;
+    // colorpan.lineWidth = 10;
     shap = 2;
 }
 
@@ -64,7 +67,9 @@ function shapeChange() {
     var myvalue = myselect.options[index].value;
     var mytext = myselect.options[index].text;
     shap = parseInt(myvalue);
-
+    document.getElementById('eraser').style.color="#333";
+    colorpan.strokeStyle=document.getElementById('color').value;
+    context.strokeStyle=document.getElementById('color').value;
 }
 
 /**
@@ -426,3 +431,20 @@ $('#file_upload_img').uploadify({
         }
     },
 });
+
+document.onkeydown = function(e){
+    var pressEvent = e || window.event;
+    var keyCode = '';
+    if(pressEvent.keyCode){
+        keyCode = pressEvent.keyCode;
+    }
+    if(keyCode == 67){
+        clearCanvas();
+    }
+    if(keyCode == 69){
+        doEraser();
+    }
+    if(keyCode == 90){
+        back();
+    }
+}
