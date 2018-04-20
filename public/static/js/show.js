@@ -25,10 +25,19 @@ $('#jian').click(function(){
 });
 
 function show(){
+    clearCanvas();
     n/=sd/10;
    for(var i in arr){
        choose(arr[i].status,arr[i].color,arr[i].size,arr[i].global,arr[i].line);
    }
+}
+
+/**
+ * 清除画布
+ */
+function clearCanvas(){
+    time=50;
+    context.clearRect(0,0,width,height);
 }
 
 function choose(status,color,size,global,line){
