@@ -81,6 +81,7 @@
     postData['id']={$id};
     $.post('/index/draw/info',postData,function(result){
         postArr=result.content;
+        length=postArr.length;
         var img = new Image();
         img.src = result.thumb;
         img.onload=function(){
