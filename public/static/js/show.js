@@ -17,16 +17,16 @@ var data;
 var sd=10;
 $('#jia').click(function(){
     sd<50?sd++:sd;
-    $('#sd').html(sd/10);
+    $('#sd').val(sd/10);
 });
 $('#jian').click(function(){
     sd>1?sd--:sd;
-    $('#sd').html(sd/10);
+    $('#sd').val(sd/10);
 });
 
 function show(){
     clearCanvas();
-    n/=sd/10;
+    n/=$('#sd').val();
    for(var i in arr){
        choose(arr[i].status,arr[i].color,arr[i].size,arr[i].global,arr[i].line);
    }
