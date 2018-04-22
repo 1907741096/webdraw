@@ -6,10 +6,9 @@
     .box .title { background:#eee; height:30px; width:400px; cursor:move; }
     .box .title span{margin-left: 10px;}
     .box .close {display:block; width:18px; height:18px; line-height:20px; text-align:center; cursor:pointer; position:absolute; right:5px; top:3px; font-weight:bold; }
-    .bg_change_size { background:url('/static/image/size.png') no-repeat; }
     .box-left{ width: 50%;height: 268px;float: left; padding: 20px; }
     .box-left-li{ width:100%;height: 45px;border-bottom: 1px solid #eee;line-height: 45px;text-align: center;}
-    .box-left-li input{border: none;font-size: 14px;text-align: center;}
+    .box-left-li input{border: none;font-size: 14px;text-align: center;background-color:#fff; }
     .box-left-li span{font-size: 14px;cursor: pointer;}
     .box-right{ width: 50%;height: 268px;float: right; padding: 20px; }
     .box-right-top{width: 100%;height: 50px;line-height: 50px;text-align: center;}
@@ -42,6 +41,7 @@
                     <select id="shape" onchange="shapeChange()">
                         <option value="2">画笔</option>
                         <option value="3">取色器</option>
+                        <option value="4">油漆桶</option>
                         <option value="1">矩形</option>
                         <option value="0">圆形</option>
                     </select>

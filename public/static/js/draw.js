@@ -37,12 +37,21 @@ document.getElementById('color').onchange = function () {
  * 橡皮
  */
 function doEraser() {
-    context.strokeStyle = "white";
-    colorpan.strokeStyle = "white";
-    document.getElementById('eraser').style.color="#10D07A";
-    // context.lineWidth = 10;
-    // colorpan.lineWidth = 10;
-    shap = 2;
+    if(document.getElementById('eraser').style.color=="rgb(16, 208, 122)"){
+        var color=document.getElementById('color').value;
+        context.strokeStyle = color;
+        colorpan.strokeStyle = color;
+        document.getElementById('eraser').style.color="#333";
+    }else{
+        context.strokeStyle = "white";
+        colorpan.strokeStyle = "white";
+        document.getElementById('eraser').style.color="#10D07A";
+        // context.lineWidth = 10;
+        // colorpan.lineWidth = 10;
+        shap = 2;
+    }
+
+
 }
 
 /**

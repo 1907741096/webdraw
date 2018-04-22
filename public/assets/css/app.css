@@ -270,6 +270,7 @@ a {
     color: #10D07A;
     background: 0 0;
     text-align:center;
+    cursor: pointer;
 }
 .am-topbar-nav>li>a:hover:after {
      opacity: 0; 
