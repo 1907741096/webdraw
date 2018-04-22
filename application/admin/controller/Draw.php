@@ -28,4 +28,18 @@ class Draw extends Base
         $this->assign('nav','draw');
         return $this->fetch();
     }
+
+    public function status(){
+        $data=validate('Draw')->goCheck('status');
+        if(!is_array($data)){
+            $news=model('Draw')->isUpdate(true)->save(request()->param());
+            if($news){
+                return json(['status'=>1,'message'=>'操作成功']);
+            }else{
+                return json(['status'=>0,'message'=>'操作失败']);
+            }
+        }else{
+            return json($data);
+        }
+    }
 }

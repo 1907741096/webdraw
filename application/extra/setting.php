@@ -6,7 +6,7 @@
  * Time: 9:50
  */
 return [
-    'page_count'=>5,
+    'page_count'=>15,
     'img_prefix'  => '/',
     'token_expire_in'=>7200,
     'md5_pre'=>'wd_',
