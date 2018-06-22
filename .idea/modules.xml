@@ -4,9 +4,10 @@
     <modules>
       <module fileurl="file://$USER_HOME$/Desktop/BDLSSL/.idea/BDLSSL.iml" filepath="$USER_HOME$/Desktop/BDLSSL/.idea/BDLSSL.iml" />
       <module fileurl="file://$PROJECT_DIR$/../WebResume/.idea/WebResume.iml" filepath="$PROJECT_DIR$/../WebResume/.idea/WebResume.iml" />
-      <module fileurl="file://C:\wamp\www\basic\.idea\basic.iml" filepath="C:\wamp\www\basic\.idea\basic.iml" />
+      <module fileurl="file://C:/wamp/www/basic/.idea/basic.iml" filepath="C:/wamp/www/basic/.idea/basic.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/erciyuan.iml" filepath="$PROJECT_DIR$/.idea/erciyuan.iml" />
       <module fileurl="file://$PROJECT_DIR$/../laravel/.idea/laravel.iml" filepath="$PROJECT_DIR$/../laravel/.idea/laravel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../paydayloan/.idea/paydayloan.iml" filepath="$PROJECT_DIR$/../paydayloan/.idea/paydayloan.iml" />
       <module fileurl="file://$PROJECT_DIR$/../rrwp/.idea/rrwp.iml" filepath="$PROJECT_DIR$/../rrwp/.idea/rrwp.iml" />
       <module fileurl="file://$PROJECT_DIR$/../ssp/.idea/ssp.iml" filepath="$PROJECT_DIR$/../ssp/.idea/ssp.iml" />
       <module fileurl="file://$PROJECT_DIR$/../wxbook/.idea/wxbook.iml" filepath="$PROJECT_DIR$/../wxbook/.idea/wxbook.iml" />

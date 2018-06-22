@@ -9,6 +9,9 @@
         <input type="button" value="点击演示" onclick="show()" class="am-btn am-btn-default">
     </div>
     <div class="draw-top" style="margin-left: 80px;">
+        <input type="button" value="导出过程" onclick="down()" class="am-btn am-btn-default">
+    </div>
+    <div class="draw-top" style="margin-left: 80px;">
         <input type="button" value="选择速度" class="am-btn am-btn-default">
     </div>
     <div class="draw-top">
@@ -27,10 +30,15 @@
 <script>
     var arr=[];
     var postData={};
+    var content;
     postData['id']={$draw.id};
     $.post('/index/draw/info',postData,function(result){
         arr=result.content;
     },"JSON");
+    //导出过程
+    function down(){
+        window.open('/index/draw/down?id='+postData['id']);
+    }
 </script>
 <script language="JavaScript" src="__STATIC__/js/show.js"></script>
 </body>

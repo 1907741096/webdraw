@@ -33,6 +33,27 @@ class Index extends Controller
         }
     }
 
+    public function openTxt()
+    {
+        $file = request()->file('file');
+        $info = $file->move('upload'); //给定一个目录
+        if ($info && $info->getPathname()) {
+            $thumb = $info->getPathname();
+            $content = file_get_contents($thumb);//将整个文件内容读入到一个字符串中
+            
+            return json([
+                'status' => 1,
+                'message' => 'success',
+                'content' => json_decode($content)
+            ]);
+        } else {
+            return json([
+                'status' => 0,
+                'message' => 'error',
+            ]);
+        }
+    }
+
     public function save()
     {
         if (!session('user') || session('user') == null) {

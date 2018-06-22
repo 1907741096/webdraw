@@ -441,6 +441,28 @@ $('#file_upload_img').uploadify({
     },
 });
 
+$('#file_upload_txt').uploadify({
+    'swf'      : '/static/uploadify/uploadify.swf',
+    'uploader' : '/index/index/openTxt',
+    'buttonText': '上传过程',
+    'fileTypeDesc': 'Txt Files',
+    'fileObjName' : 'file',
+    //允许上传的文件后缀
+    'fileTypeExts': '*.txt',
+    'onUploadSuccess' : function(file,data,response) {
+        // response true ,false
+        if(response) {
+            var obj = JSON.parse(data); //由JSON字符串转换为JSON对象
+            $('#' + file.id).find('.data').html(' 打开成功');
+            postArr = obj.content;
+            length = postArr.length;
+            show();
+        }else{
+            alert('打开失败');
+        }
+    },
+});
+
 document.onkeydown = function(e){
     var pressEvent = e || window.event;
     var keyCode = '';
@@ -456,4 +478,99 @@ document.onkeydown = function(e){
     if(keyCode == 90){
         back();
     }
+}
+
+var time = 50;
+var n = 1;
+
+function show(){
+    clearCanvas();
+   for(var i in postArr){
+       choose(postArr[i].status,postArr[i].color,postArr[i].size,postArr[i].global,postArr[i].line);
+   }
+}
+
+/**
+ * 清除画布
+ */
+function clearCanvas(){
+    context.clearRect(0,0,width,height);
+}
+
+function choose(status,color,size,global,line){
+    for(var j in line){
+        if(j==0){
+            setTimeout("drawbegin("+status+",'"+color+"',"+size+","+global+","+line[j][0]+","+line[j][1]+")",time);
+            time+=(n*30);
+        }else if(j== line.length-1){
+            setTimeout("drawend("+status+","+line[j][0]+","+line[j][1]+")",time);
+            time+=n;
+        }else{
+            setTimeout("drawmove("+status+","+line[j][0]+","+line[j][1]+")",time);
+            time+=n;
+        }
+    }
+}
+var orignalX,orignalY;
+function drawbegin(shap,color,size,global,lastX,lastY){
+    context.strokeStyle = color;
+    context.lineWidth= size;
+    context.globalAlpha= global;
+    data = context.getImageData(0, 0, width, height);
+    orignalX=lastX;
+    orignalY=lastY;
+    context.moveTo(lastX,lastY);
+}
+function drawmove(shap,lastX,lastY){
+    context.lineTo(lastX, lastY); //根据鼠标路径绘画
+    context.stroke(); //立即渲染
+
+    switch (shap) {
+        case 0:
+            context.clearRect(0, 0, width, height);
+            context.putImageData(data, 0, 0);
+            context.beginPath();
+            context.arc(orignalX + (lastX - orignalX) / 2, orignalY + (lastY - orignalY) / 2, Math.abs(lastX - orignalX) / 2, 0, Math.PI * 2, true);
+            context.stroke();
+            context.closePath();
+            break;
+        case 1:
+            context.clearRect(0, 0, width, height);
+            context.putImageData(data, 0, 0);
+            context.strokeRect(orignalX, orignalY, lastX - orignalX, lastY - orignalY);
+            break;
+        case 2:
+            context.lineTo(lastX, lastY); //根据鼠标路径绘画
+            context.stroke(); //立即渲染
+            break;
+
+    }
+}
+
+function drawend(shap,lastX,lastY){
+    context.clearRect(0, 0, width, height);
+    context.putImageData(data, 0, 0);
+    switch (shap) {
+        case 0:
+            context.beginPath();
+            context.arc(orignalX + (lastX - orignalX) / 2, orignalY + (lastY - orignalY) / 2, Math.abs(lastX - orignalX) / 2, 0, Math.PI * 2, true);
+            context.stroke();
+            context.closePath();
+            break;
+        case 1:
+            context.beginPath();
+            context.strokeRect(orignalX, orignalY, lastX - orignalX, lastY - orignalY);
+            context.closePath();
+            break;
+        case 2:
+            context.lineTo(lastX, lastY); //根据鼠标路径绘画
+            context.stroke(); //立即渲染
+
+            break;
+    }
+    data = context.getImageData(0, 0, width, height);
+    context.beginPath();
+    context.clearRect(0, 0, width, height);
+    context.putImageData(data, 0, 0);
+    context.closePath();
 }

@@ -44,6 +44,22 @@ class Draw extends Controller
 
         return $this->fetch();
     }
+    public function down(){
+        $msg=validate('draw')->gocheck('id');
+        if(is_array($msg)){
+            return $this->puterror($msg['message']);
+        }
+        $this->assign('title',input('title'));        
+        $id=input('id');
+        $data['id']=$id;
+        $draw=model('draw')->find($data);
+
+        $text = $draw['content'];
+        $fileName = $draw['title']."作画过程.txt";
+        header("Content-Type: application/txt");
+        header("Content-Disposition: attachment; filename=".$fileName);
+        echo $text;
+    }
     public function info(){
         $id=input('id');
         $data['id']=$id;

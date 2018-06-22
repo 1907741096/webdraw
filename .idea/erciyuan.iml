@@ -12,5 +12,6 @@
     <orderEntry type="module" module-name="rrwp" />
     <orderEntry type="module" module-name="BDLSSL" />
     <orderEntry type="module" module-name="ssp" />
+    <orderEntry type="module" module-name="paydayloan" />
   </component>
 </module>
