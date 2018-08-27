@@ -484,7 +484,7 @@ var time = 50;
 var n = 1;
 
 function show(){
-    clearCanvas();
+    clearShowCanvas();
    for(var i in postArr){
        choose(postArr[i].status,postArr[i].color,postArr[i].size,postArr[i].global,postArr[i].line);
    }
@@ -493,7 +493,7 @@ function show(){
 /**
  * 清除画布
  */
-function clearCanvas(){
+function clearShowCanvas(){
     context.clearRect(0,0,width,height);
 }
 

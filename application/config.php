@@ -142,10 +142,10 @@ return [
 
     // 视图输出字符串内容替换
     'view_replace_str'       => [
-        '__URI__'=>'/',
-        '__STATIC__'=>'/static',
-        '__ADMIN__'=>'/admin',
-        '__INDEX__'=>'/Index'
+        '__URI__'=>'./',
+        '__STATIC__'=>'./static',
+        '__ADMIN__'=>'./admin',
+        '__INDEX__'=>'./Index'
     ],
     // 默认跳转页面对应的模板文件
     'dispatch_success_tmpl'  => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',
