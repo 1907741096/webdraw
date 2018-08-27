@@ -16,9 +16,9 @@ class Login extends Controller
     public function index()
     {
         if (session('user') && session('user') != null) {
-            jump('/Index');
+            jump('/webdraw/public/index.php/index');
         } else {
-            return $this->fetch('/login/login');
+            return $this->fetch('/webdraw/public/index.php/login');
         }
     }
 
@@ -27,7 +27,7 @@ class Login extends Controller
         if (session('user') && session('user') != null) {
             jump('/Index');
         } else {
-            return $this->fetch('/login/register');
+            return $this->fetch('/webdraw/public/index.php/login/register');
         }
     }
 

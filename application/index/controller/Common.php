@@ -19,7 +19,7 @@ class Common extends Controller
         $this->assign('menu','index');
         $this->assign('title',input('title'));
         if(!session('user')||session('user')==null){
-            jump('webdraw/public/index.php/index/login');
+            jump('/webdraw/public/index.php/index/login');
         }
         $user_id=session('user')['id'];
         $this->assign('user_id',$user_id);
