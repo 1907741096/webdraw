@@ -7,7 +7,7 @@
         {volist name='news' id='new'}
             <article class="am-g blog-entry-article">
                 <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
-                    <a href="__INDEX__/news/detail?id={$new.id}"><img src="{$new.thumb}" alt="" class="am-u-sm-12"></a>
+                    <a href="__INDEX__/news/detail?id={$new.id}"><img src="__URI__{$new.thumb}" alt="" class="am-u-sm-12"></a>
                 </div>
                 <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
                     <span><a href="" class="blog-color">{$tags[$new.tags]} &nbsp;</a></span>
