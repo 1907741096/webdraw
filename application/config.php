@@ -142,10 +142,11 @@ return [
 
     // 视图输出字符串内容替换
     'view_replace_str'       => [
-        '__URI__'=>'./',
-        '__STATIC__'=>'./static',
-        '__ADMIN__'=>'./admin',
-        '__INDEX__'=>'./Index'
+        '__URI__'=>'/webdraw/public',
+        '__STATIC__'=>'/webdraw/public/static',
+        '__ADMIN__'=>'/webdraw/public/index.php/admin',
+        '__INDEX__'=>'/webdraw/public/index.php/index',
+        '__ASSETS__'=>'/webdraw/public/assets'
     ],
     // 默认跳转页面对应的模板文件
     'dispatch_success_tmpl'  => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',
