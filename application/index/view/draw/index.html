@@ -5,7 +5,7 @@
     <figure data-am-widget="figure" class="am am-figure am-figure-default "   data-am-figure="{  pureview: 'true' }">
         <div id="container">
             {volist name="draws" id="draw"}
-                <div><img src="{$draw.thumb}"><a href="/index/draw/detail?id={$draw.id}"><h3>{$draw.title}</h3></a></div>
+                <div><img src="__URI__{$draw.thumb}"><a href="__INDEX__/draw/detail?id={$draw.id}"><h3>{$draw.title}</h3></a></div>
             {/volist}
         </div>
     </figure>
