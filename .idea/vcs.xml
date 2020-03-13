@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/../paydayloan" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../ssp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../wxbook" vcs="Git" />
   </component>
 </project>
