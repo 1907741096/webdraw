@@ -19,7 +19,7 @@ class Base extends Controller
     private function _init() {
         $isLogin = $this->isLogin();
         if(!$isLogin) {
-            jump('/admin/login');
+            jump('/webdraw/public/index.php/admin/login');
         }
     }
 
