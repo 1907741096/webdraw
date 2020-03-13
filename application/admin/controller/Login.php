@@ -13,7 +13,7 @@ class Login extends Controller
 {
     public function index(){
         if(session('admin')&&session('admin')!=null){
-            jump('/webdraw/public/index.php/index');
+            jump('/webdraw/public/index.php/admin/login');
         }
         return $this->fetch();
     }
