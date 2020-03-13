@@ -1,3 +1,4 @@
+var prefix = "/webdraw/public/index.php";
 $('#button-login').click(function(){
 	var username=$.trim($('input[name="username"]').val());
 	var password=$.trim($('input[name="password"]').val());
@@ -10,10 +11,10 @@ $('#button-login').click(function(){
 		return;
 	}
 	var data={'username':username,'password':password};
-	var url="/webdraw/public/index.php/admin/login/checklogin";
+	var url=prefix+"/admin/login/checklogin";
 	$.post(url,data,function(result){
 		if(result.status===1){
-			dialog.success(result.message,'/admin');
+			dialog.success(result.message,prefix+'/admin');
 		}else{
 			dialog.error(result.message);
 		}
@@ -31,10 +32,10 @@ $('#button-login-user').click(function(){
         return;
     }
     var data={'username':username,'password':password};
-    var url="/webdraw/public/index.php/index/login/checklogin";
+    var url=prefix+"/index/login/checklogin";
     $.post(url,data,function(result){
         if(result.status===1){
-            dialog.success(result.message,'/index');
+            dialog.success(result.message,prefix+'/index');
         }else{
             dialog.error(result.message);
         }
@@ -57,21 +58,21 @@ $('#button-register-user').click(function(){
         return;
     }
     var data={'username':username,'password':password,'repassword':repassword};
-    var url="/webdraw/public/index.php/index/login/register";
+    var url=prefix+"/index/login/register";
     $.post(url,data,function(result){
         if(result.status===1){
-            dialog.success(result.message,'/index/login');
+            dialog.success(result.message,prefix+'/index/login');
         }else{
             dialog.error(result.message);
         }
     },"json");
 });
 $('.loginout').click(function(){
-    var url="/webdraw/public/index.php/index/login/loginout";
+    var url=prefix+"/index/login/loginout";
     $.post(url,[],function(result){
         console.log(result);
         if(result.status===1){
-            dialog.success(result.message,'/index/login');
+            dialog.success(result.message,prefix+'/index/login');
         }else{
             dialog.error(result.message);
         }
