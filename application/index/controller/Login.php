@@ -25,7 +25,7 @@ class Login extends Controller
     public function reg()
     {
         if (session('user') && session('user') != null) {
-            jump('/Index');
+            jump('/webdraw/public/index.php/index');
         } else {
             return $this->fetch('login/register');
         }
