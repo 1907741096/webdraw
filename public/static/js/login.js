@@ -10,7 +10,7 @@ $('#button-login').click(function(){
 		return;
 	}
 	var data={'username':username,'password':password};
-	var url="/webdraw/public/admin/login/checklogin";
+	var url="/webdraw/public/index.php/admin/login/checklogin";
 	$.post(url,data,function(result){
 		if(result.status===1){
 			dialog.success(result.message,'/admin');
@@ -31,7 +31,7 @@ $('#button-login-user').click(function(){
         return;
     }
     var data={'username':username,'password':password};
-    var url="/webdraw/public/index/login/checklogin";
+    var url="/webdraw/public/index.php/index/login/checklogin";
     $.post(url,data,function(result){
         if(result.status===1){
             dialog.success(result.message,'/index');
@@ -57,7 +57,7 @@ $('#button-register-user').click(function(){
         return;
     }
     var data={'username':username,'password':password,'repassword':repassword};
-    var url="/webdraw/public/index/login/register";
+    var url="/webdraw/public/index.php/index/login/register";
     $.post(url,data,function(result){
         if(result.status===1){
             dialog.success(result.message,'/index/login');
@@ -67,7 +67,7 @@ $('#button-register-user').click(function(){
     },"json");
 });
 $('.loginout').click(function(){
-    var url="/webdraw/public/index/login/loginout";
+    var url="/webdraw/public/index.php/index/login/loginout";
     $.post(url,[],function(result){
         console.log(result);
         if(result.status===1){
