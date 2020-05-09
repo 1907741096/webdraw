@@ -13,7 +13,7 @@ $('#button-login').click(function(){
 	var url="/webdraw/public/index.php/admin/login/checklogin";
 	$.post(url,data,function(result){
 		if(result.status===1){
-			dialog.success(result.message,'/admin');
+			dialog.success(result.message,'/webdraw/public/index.php/admin');
 		}else{
 			dialog.error(result.message);
 		}
@@ -34,7 +34,7 @@ $('#button-login-user').click(function(){
     var url="/webdraw/public/index.php/index/login/checklogin";
     $.post(url,data,function(result){
         if(result.status===1){
-            dialog.success(result.message,'/index');
+            dialog.success(result.message,'/webdraw/public/index.php/index');
         }else{
             dialog.error(result.message);
         }
@@ -60,7 +60,7 @@ $('#button-register-user').click(function(){
     var url="/webdraw/public/index.php/index/login/register";
     $.post(url,data,function(result){
         if(result.status===1){
-            dialog.success(result.message,'/index/login');
+            dialog.success(result.message,'/webdraw/public/index.php/index/login');
         }else{
             dialog.error(result.message);
         }
@@ -71,7 +71,7 @@ $('.loginout').click(function(){
     $.post(url,[],function(result){
         console.log(result);
         if(result.status===1){
-            dialog.success(result.message,'/index/login');
+            dialog.success(result.message,'/webdraw/public/index.php/index/login');
         }else{
             dialog.error(result.message);
         }
