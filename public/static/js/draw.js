@@ -392,7 +392,7 @@ function save(){
     var formdata=new FormData();
     formdata.append('file',blob);
     $.ajax({
-        url : '__INDEX__/index/image',
+        url : '/webdraw/public/index.php/index/index/image',
         data :  formdata,
         processData : false,
         contentType : false,
@@ -406,7 +406,7 @@ function save(){
                 $.post('/index/index/save',postData,function(result){
                     if(result.status == 1) {
                         //成功
-                        dialog.success(result.message,'/index/draw');
+                        dialog.success(result.message,'/webdraw/public/index.php/index/draw');
                     }else if(result.status == 0) {
                         // 失败
                         dialog.error(result.message);
@@ -421,8 +421,8 @@ function save(){
 }
 
 $('#file_upload_img').uploadify({
-    'swf'      : '/static/uploadify/uploadify.swf',
-    'uploader' : '/index/index/openImage',
+    'swf'      : '/webdraw/public/static/uploadify/uploadify.swf',
+    'uploader' : '/webdraw/public/index.php/index/index/openImage',
     'buttonText': '打开图片',
     'fileTypeDesc': 'Image Files',
     'fileObjName' : 'file',
@@ -442,8 +442,8 @@ $('#file_upload_img').uploadify({
 });
 
 $('#file_upload_txt').uploadify({
-    'swf'      : '/static/uploadify/uploadify.swf',
-    'uploader' : '/index/index/openTxt',
+    'swf'      : '/webdraw/public/uploadify/uploadify.swf',
+    'uploader' : '/webdraw/public/index.php/index/index/openTxt',
     'buttonText': '上传过程',
     'fileTypeDesc': 'Txt Files',
     'fileObjName' : 'file',
