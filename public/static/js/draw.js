@@ -392,7 +392,7 @@ function save(){
     var formdata=new FormData();
     formdata.append('file',blob);
     $.ajax({
-        url : '/index/index/image',
+        url : '__INDEX__/index/image',
         data :  formdata,
         processData : false,
         contentType : false,

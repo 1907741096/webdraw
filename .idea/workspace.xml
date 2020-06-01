@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="97166540-b977-4ca5-b5a1-77b0791130ca" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/index/draw.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/index/draw.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/user/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/user/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/js/draw.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/js/draw.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,40 +34,6 @@
         <option value="JavaScript File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>upload</find>
-      <find>h2</find>
-      <find>pagination&gt;li&gt;a</find>
-      <find>20px auto</find>
-      <find>a:hover{color:#fff;background-color:#0</find>
-      <find>.pagination&gt;.active&gt;span</find>
-      <find>.navbar-inverse .navbar-toggle</find>
-      <find>en</find>
-      <find>recommend</find>
-      <find>flag</find>
-      <find>svg</find>
-      <find>筛选条件</find>
-      <find>loadNextPage</find>
-      <find>seeMore</find>
-      <find>summary</find>
-      <find>_zrender_hover</find>
-      <find>mssp0</find>
-      <find>900px</find>
-      <find>id=&quot;table&quot;</find>
-      <find>ctrl-app-list-filter</find>
-      <find>list-filter-fields</find>
-      <find>list-filter-fields&quot;</find>
-      <find>ctrl-app-list-filter&quot;</find>
-      <find>首页</find>
-      <find>jquery</find>
-      <find>end</find>
-      <find>flag = 0</find>
-      <find>followS</find>
-      <find>length</find>
-      <find>drawImage</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -237,7 +204,7 @@
       <workItem from="1524644919777" duration="47000" />
       <workItem from="1584091243087" duration="7469000" />
       <workItem from="1584611974265" duration="2206000" />
-      <workItem from="1591001198759" duration="1174000" />
+      <workItem from="1591001198759" duration="1557000" />
     </task>
     <servers />
   </component>
@@ -271,5 +238,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="647" y="496" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584611977086" />
+    <state x="851" y="452" width="647" height="534" key="find.popup" timestamp="1591002713812">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="851" y="452" width="647" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591002713812" />
   </component>
 </project>
