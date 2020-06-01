@@ -403,7 +403,7 @@ function save(){
                 postData['title']=document.getElementById('title').value;
                 postData['content']=JSON.stringify(postArr);
                 postData['thumb']=data.thumb;
-                $.post('/index/index/save',postData,function(result){
+                $.post('/webdraw/public/index.php/index/index/save',postData,function(result){
                     if(result.status == 1) {
                         //成功
                         dialog.success(result.message,'/webdraw/public/index.php/index/draw');
