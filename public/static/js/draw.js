@@ -442,7 +442,7 @@ $('#file_upload_img').uploadify({
 });
 
 $('#file_upload_txt').uploadify({
-    'swf'      : '/webdraw/public/uploadify/uploadify.swf',
+    'swf'      : '/webdraw/public/static/uploadify/uploadify.swf',
     'uploader' : '/webdraw/public/index.php/index/index/openTxt',
     'buttonText': '上传过程',
     'fileTypeDesc': 'Txt Files',
