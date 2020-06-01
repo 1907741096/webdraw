@@ -79,7 +79,7 @@
 <script>
     var postData={};
     postData['id']={$id};
-    $.post('/index/draw/info',postData,function(result){
+    $.post("__INDEX__/draw/info", postData,function(result){
         postArr=result.content;
         length=postArr.length;
         var img = new Image();
