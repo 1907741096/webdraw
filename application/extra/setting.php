@@ -7,7 +7,7 @@
  */
 return [
     'page_count'=>15,
-    'img_prefix'  => '/',
+    'img_prefix'  => '/webdraw/public',
     'token_expire_in'=>7200,
     'md5_pre'=>'wd_',
     'default_style'=>1,
