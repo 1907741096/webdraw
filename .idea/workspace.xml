@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97166540-b977-4ca5-b5a1-77b0791130ca" name="Default" comment="" />
+    <list default="true" id="97166540-b977-4ca5-b5a1-77b0791130ca" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/draw/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/draw/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/index/draw.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/index/draw.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -201,7 +205,8 @@
       <workItem from="1584091243087" duration="7469000" />
       <workItem from="1584611974265" duration="2206000" />
       <workItem from="1591001198759" duration="1728000" />
-      <workItem from="1591002955993" duration="1429000" />
+      <workItem from="1591002955993" duration="1858000" />
+      <workItem from="1591005063175" duration="142000" />
     </task>
     <servers />
   </component>
@@ -231,10 +236,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="647" y="496" key="com.intellij.ide.util.TipDialog" timestamp="1591002956925">
+    <state x="647" y="496" key="com.intellij.ide.util.TipDialog" timestamp="1591005127639">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="647" y="496" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591002956925" />
+    <state x="647" y="496" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591005127639" />
     <state x="931" y="331" width="647" height="534" key="find.popup" timestamp="1591004408481">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

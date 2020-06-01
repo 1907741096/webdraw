@@ -32,7 +32,7 @@
     var postData={};
     var content;
     postData['id']={$draw.id};
-    $.post('/index/draw/info',postData,function(result){
+    $.post('/webdraw/public/index.php/index/draw/info',postData,function(result){
         arr=result.content;
     },"JSON");
     //导出过程
