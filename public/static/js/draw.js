@@ -225,6 +225,19 @@ function myCanvasMouseUp(event) {
                 context.lineTo(lastX, lastY); //根据鼠标路径绘画
                 context.stroke(); //立即渲染
                 break;
+            case 4:
+                lastX = event.offsetX;
+                lastY = event.offsetY;
+                var colorData = document.getElementById("myCanvas").getPixelColor(lastX, lastY);
+                document.getElementById('color').value = colorData.hex;
+                context.strokeStyle = colorData.hex;
+                // 获取该点像素的数据
+                context.lineTo(lastX + 100, lastY); //根据鼠标路径绘画
+                context.lineTo(lastX - 100, lastY); //根据鼠标路径绘画
+                context.lineTo(lastX, lastY + 100); //根据鼠标路径绘画
+                context.lineTo(lastX, lastY - 100); //根据鼠标路径绘画
+                context.stroke(); //立即渲染
+                break;
         }
         postArr[length]['line'].push([lastX,lastY]);
         length++;

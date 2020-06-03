@@ -65,18 +65,18 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/static/image" />
+      <recent name="C:\wamp\www\WebResume\models\controllers" />
+      <recent name="C:\wamp\www\basic\modules\views\public" />
+      <recent name="C:\wamp\www\erciyuan\application" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/application/index/view/index" />
       <recent name="C:\wamp\www\laravel\resources\lang" />
       <recent name="C:\wamp\www\basic\modules\views" />
       <recent name="C:\wamp\www\erciyuan\application\index\view\Login" />
       <recent name="C:\wamp\www\erciyuan\application\common\validate" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/static/image" />
-      <recent name="C:\wamp\www\WebResume\models\controllers" />
-      <recent name="C:\wamp\www\basic\modules\views\public" />
-      <recent name="C:\wamp\www\erciyuan\application" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Built-in Web Server.Unnamed">
@@ -206,7 +206,13 @@
       <workItem from="1591001198759" duration="1728000" />
       <workItem from="1591002955993" duration="1858000" />
       <workItem from="1591005063175" duration="1843000" />
-      <workItem from="1591006920286" duration="242000" />
+      <workItem from="1591006920286" duration="1816000" />
+      <workItem from="1591081939364" duration="1795000" />
+      <workItem from="1591152665959" duration="1798000" />
+      <workItem from="1591154488197" duration="1797000" />
+      <workItem from="1591156323244" duration="630000" />
+      <workItem from="1591167075426" duration="1082000" />
+      <workItem from="1591179070895" duration="102000" />
     </task>
     <servers />
   </component>
@@ -236,13 +242,13 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="617" y="493" key="com.intellij.ide.util.TipDialog" timestamp="1591006982137">
+    <state x="361" y="493" key="com.intellij.ide.util.TipDialog" timestamp="1591179073388">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="617" y="493" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591006982137" />
-    <state x="931" y="331" width="647" height="534" key="find.popup" timestamp="1591006268107">
+    <state x="361" y="493" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591179073388" />
+    <state x="931" y="331" width="647" height="534" key="find.popup" timestamp="1591007162490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="931" y="331" width="647" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591006268107" />
+    <state x="931" y="331" width="647" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591007162490" />
   </component>
 </project>
