@@ -18,12 +18,17 @@
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
     <option name="GROUP_SCHEMA" value="true" />
     <option name="GROUP_CONTENTS" value="false" />
     <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -212,7 +217,12 @@
       <workItem from="1591154488197" duration="1797000" />
       <workItem from="1591156323244" duration="630000" />
       <workItem from="1591167075426" duration="1082000" />
-      <workItem from="1591179070895" duration="102000" />
+      <workItem from="1591179070895" duration="1817000" />
+      <workItem from="1591180898439" duration="1795000" />
+      <workItem from="1591182705501" duration="1382000" />
+      <workItem from="1591237232434" duration="1539000" />
+      <workItem from="1591239062559" duration="1798000" />
+      <workItem from="1591240871201" duration="1459000" />
     </task>
     <servers />
   </component>
@@ -242,10 +252,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="493" key="com.intellij.ide.util.TipDialog" timestamp="1591179073388">
+    <state x="234" y="492" key="com.intellij.ide.util.TipDialog" timestamp="1591240870710">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="361" y="493" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591179073388" />
+    <state x="234" y="492" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591240870710" />
     <state x="931" y="331" width="647" height="534" key="find.popup" timestamp="1591007162490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
