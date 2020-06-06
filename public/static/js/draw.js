@@ -431,7 +431,7 @@ colorpanCanvas.addEventListener("mouseup", colorpanMouseUp, false);
 
 function openImage(thumb) {
     var img = new Image();
-    img.src = thumb;
+    img.src = "/webdraw/public" + thumb;
     img.onload = function () {
         context.drawImage(img, 0, 0, width, height);
     }
