@@ -84,7 +84,7 @@
         postArr=result.content;
         length=postArr.length;
         var img = new Image();
-        img.src = result.thumb;
+        img.src = "/webdraw/public" + result.thumb;
         img.onload=function(){
             context.drawImage(img,0,0,width,height);
         }
