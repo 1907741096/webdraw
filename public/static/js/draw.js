@@ -465,7 +465,7 @@ function save() {
             if (data.status == 1) {
                 postData['title'] = document.getElementById('title').value;
                 postData['content'] = JSON.stringify(postArr);
-                postData['thumb'] = data.thumb;
+                postData['thumb'] = "/webdraw/public" + data.thumb;
                 $.post('/webdraw/public/index.php/index/index/save', postData, function (result) {
                     if (result.status == 1) {
                         //成功
